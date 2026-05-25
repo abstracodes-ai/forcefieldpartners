@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
 
+import { PRIMARY_DOMAIN } from "@/lib/site-content";
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    host: "https://forcefieldpartners.in",
+    host: PRIMARY_DOMAIN,
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://forcefieldpartners.in/sitemap.xml",
+    sitemap: `${PRIMARY_DOMAIN}/sitemap.xml`,
   };
 }

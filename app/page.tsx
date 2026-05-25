@@ -26,56 +26,11 @@ import {
 
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
+import { ServiceExplorer } from "@/components/site/service-explorer";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
-const services = [
-  {
-    title: "Field Force Outsourcing",
-    description:
-      "Dedicated field execution teams built for territory coverage, market reach, reporting discipline, and measurable last-mile accountability.",
-    icon: Users,
-    tag: "Ground execution",
-  },
-  {
-    title: "Distributor & Retailer Activation",
-    description:
-      "Channel activation programs that improve distributor movement, retailer engagement, visibility, and sales momentum across target markets.",
-    icon: Store,
-    tag: "Channel growth",
-  },
-  {
-    title: "Sales Training & KRA Setup",
-    description:
-      "Structured onboarding, role clarity, performance KRAs, and feedback loops that turn field teams into reliable execution engines.",
-    icon: GraduationCap,
-    tag: "Performance systems",
-  },
-  {
-    title: "DevSecOps Services",
-    description:
-      "Secure delivery pipelines, policy controls, infrastructure automation, and release governance that reduce friction without compromising trust.",
-    icon: CloudCog,
-    tag: "Secure cloud delivery",
-  },
-  {
-    title: "MLOps Services",
-    description:
-      "Production-grade model packaging, deployment, monitoring, and lifecycle management so ML moves from pilots to dependable operations.",
-    icon: BrainCircuit,
-    tag: "Model operations",
-  },
-  {
-    title: "AI Workflow Automation",
-    description:
-      "AI-assisted workflows that remove manual bottlenecks, connect tools and teams, and improve cycle time across business operations.",
-    icon: Workflow,
-    tag: "Automation layer",
-  },
-];
 
 const challengeRows = [
   {
@@ -92,7 +47,8 @@ const challengeRows = [
   },
   {
     problem: "Teams spend too much time on repetitive coordination and follow-up work.",
-    solution: "ForceField automates workflows across tools and functions using AI where it creates measurable operational leverage.",
+    solution:
+      "ForceField automates business workflows across tools and functions, with or without AI, wherever process friction is slowing execution.",
   },
 ];
 
@@ -109,7 +65,7 @@ const sectors = [
   },
   {
     title: "Technology & SaaS",
-    description: "DevSecOps, platform reliability, AI workflow automation, and production-grade MLOps support.",
+    description: "DevSecOps, platform reliability, business workflow automation, and production-grade MLOps support.",
     icon: BriefcaseBusiness,
   },
   {
@@ -151,6 +107,7 @@ const workSteps = [
 const aboutPoints = [
   "Execution discipline across both field operations and digital operations",
   "Security-first delivery mindset for modern cloud and AI environments",
+  "Workflow automation capability across operational, commercial, and back-office functions",
   "Operating models designed for scale, accountability, and measurable follow-through",
 ];
 
@@ -203,7 +160,8 @@ export default function HomePage() {
                 </h1>
                 <p className="max-w-2xl text-balance text-base leading-8 text-slate-300 sm:text-lg">
                   ForceField Partners LLP helps businesses scale execution from field sales deployment to secure
-                  DevSecOps, production-grade MLOps, and AI-powered workflow automation.
+                  DevSecOps, production-grade MLOps, and business workflow automation powered by disciplined systems
+                  and AI where useful.
                 </p>
               </div>
 
@@ -223,7 +181,7 @@ export default function HomePage() {
                 {[
                   "Field deployment with accountability",
                   "Secure delivery for modern cloud stacks",
-                  "AI and ML operations built for production",
+                  "Workflow automation across business functions",
                 ].map((item) => (
                   <div
                     key={item}
@@ -287,10 +245,10 @@ export default function HomePage() {
                 <div className="float-slower absolute bottom-8 right-5 w-[12rem] rounded-[1.5rem] border border-white/10 bg-white/8 p-4 backdrop-blur-sm sm:right-10 sm:w-[14rem]">
                   <div className="mb-3 flex items-center gap-3 text-teal-400">
                     <Bot className="size-5" />
-                    <span className="text-sm font-semibold text-white">AI Workflow Automation</span>
+                    <span className="text-sm font-semibold text-white">Business Automation</span>
                   </div>
                   <p className="text-sm leading-6 text-slate-300">
-                    Faster operations through intelligent workflow design, tool orchestration, and automation.
+                    Faster operations through workflow design, tool orchestration, and AI-assisted automation where it fits.
                   </p>
                 </div>
               </div>
@@ -298,48 +256,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="services" className="py-18 sm:py-22 lg:py-24">
-          <div className="container space-y-12">
-            <Reveal>
-              <SectionHeading
-                eyebrow="What We Execute"
-                title="Multi-domain execution services under one disciplined operating brand"
-                description="ForceField brings field teams, cloud delivery, model operations, and workflow automation into a single execution framework built for growth-focused businesses."
-              />
-            </Reveal>
-
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {services.map((service, index) => {
-                const Icon = service.icon;
-
-                return (
-                  <Reveal key={service.title} delay={index * 0.05}>
-                    <Card className="field-line group h-full overflow-hidden border-white/70">
-                      <CardHeader className="space-y-4">
-                        <div className="flex items-center justify-between gap-4">
-                          <div className="rounded-2xl bg-navy-900 p-3 text-teal-400 shadow-lg shadow-cyan-950/10">
-                            <Icon className="size-6" />
-                          </div>
-                          <span className="rounded-full border border-teal-500/14 bg-teal-500/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-500">
-                            {service.tag}
-                          </span>
-                        </div>
-                        <CardTitle className="text-navy-900">{service.title}</CardTitle>
-                        <CardDescription>{service.description}</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="flex items-center gap-2 text-sm font-semibold text-navy-800 group-hover:text-teal-500">
-                          Execution-ready service
-                          <ArrowRight className="size-4" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        <ServiceExplorer />
 
         <section id="why-forcefield" className="bg-navy-950 py-18 text-white sm:py-22 lg:py-24">
           <div className="container grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
@@ -347,7 +264,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Why ForceField"
                 title="A control layer for businesses that need execution without drag"
-                description="The recurring problem is rarely ambition. It is weak operating structure. ForceField closes the gap between strategy and disciplined delivery across field, cloud, and AI programs."
+                description="The recurring problem is rarely ambition. It is weak operating structure. ForceField closes the gap between strategy and disciplined delivery across field execution, digital operations, and workflow automation programs."
                 dark
               />
 
@@ -355,7 +272,7 @@ export default function HomePage() {
                 {[
                   "Secure-by-design execution models",
                   "Operational clarity from rollout to reporting",
-                  "One partner across physical and digital execution surfaces",
+                  "Two clear operating entities under one execution-focused brand",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3 text-sm leading-6 text-slate-300">
                     <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal-400" />
@@ -404,7 +321,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Sectors We Serve"
                 title="Built for industries where disciplined execution directly affects growth"
-                description="ForceField supports businesses that operate across distributed channels, regulated environments, cloud-native products, and high-dependency execution models."
+                description="ForceField supports businesses that operate across distributed channels, regulated environments, cloud-native products, and workflow-heavy execution environments."
                 align="center"
               />
             </Reveal>
@@ -464,7 +381,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="About ForceField"
                 title="Execution-focused by design"
-                description="ForceField Partners LLP operates where businesses need secure follow-through, not just advisory language. The company brings operational discipline to field growth, digital delivery, ML systems, and AI-led workflows."
+                description="ForceField Partners LLP operates where businesses need secure follow-through, not just advisory language. The company brings operational discipline to field growth, digital delivery, ML systems, and business workflow automation."
                 dark
               />
 
@@ -517,7 +434,7 @@ export default function HomePage() {
                 <div className="grid gap-4 sm:grid-cols-3">
                   {[
                     "Premium brand system ready for header, pitch, favicon, and profile usage",
-                    "Responsive layout optimized for mobile decision-makers and desktop buyers",
+                    "Responsive and more interactive layout for mobile decision-makers and desktop buyers",
                     "Clean architecture built on Next.js App Router, Tailwind, and motion",
                   ].map((item) => (
                     <div
@@ -550,7 +467,7 @@ export default function HomePage() {
                       </h2>
                       <p className="max-w-2xl text-balance text-base leading-8 text-slate-300 sm:text-lg">
                         Speak with ForceField Partners LLP about field deployment, secure delivery operations, MLOps,
-                        or AI workflow automation. The first conversation is focused on operating realities, not
+                        or business workflow automation. The first conversation is focused on operating realities, not
                         generic pitch decks.
                       </p>
                     </div>

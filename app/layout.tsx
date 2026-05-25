@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
 
+import { BRAND_NAME, COMPANY, PRIMARY_DOMAIN, SERVICES, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TITLE } from "@/lib/site-content";
+
 import "./globals.css";
 
-const siteUrl = "https://forcefieldpartners.in";
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
@@ -14,64 +15,89 @@ const sora = Sora({
   variable: "--font-sora",
 });
 
-const title = "ForceField Partners LLP | Execution Teams for the Field, Cloud & AI Era";
-const description =
-  "ForceField Partners LLP helps businesses scale execution across field force deployment, secure DevSecOps, production-grade MLOps, and AI-powered workflow automation.";
+const rootSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${PRIMARY_DOMAIN}/#organization`,
+    name: BRAND_NAME,
+    description: SITE_DESCRIPTION,
+    email: COMPANY.email,
+    telephone: COMPANY.phone,
+    url: PRIMARY_DOMAIN,
+    sameAs: [COMPANY.linkedin],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${PRIMARY_DOMAIN}/#service`,
+    name: BRAND_NAME,
+    url: PRIMARY_DOMAIN,
+    description: SITE_DESCRIPTION,
+    telephone: COMPANY.phone,
+    email: COMPANY.email,
+    image: `${PRIMARY_DOMAIN}/opengraph-image`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Sector V, Salt Lake City",
+      addressLocality: "Kolkata",
+      postalCode: "700091",
+      addressCountry: "IN",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "India",
+    },
+    serviceType: SERVICES.map((service) => service.title),
+    sameAs: [COMPANY.linkedin],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${PRIMARY_DOMAIN}/#website`,
+    name: BRAND_NAME,
+    url: PRIMARY_DOMAIN,
+    description: SITE_DESCRIPTION,
+  },
+];
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title,
-  description,
-  applicationName: "ForceField Partners LLP",
+  metadataBase: new URL(PRIMARY_DOMAIN),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  applicationName: BRAND_NAME,
   manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/",
   },
-  keywords: [
-    "ForceField Partners LLP",
-    "Field Force Management",
-    "DevSecOps services",
-    "MLOps services",
-    "AI workflow automation",
-    "Sales deployment",
-    "Kolkata business services",
-  ],
+  keywords: SITE_KEYWORDS,
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: ["/favicon.svg"],
     apple: ["/favicon.svg"],
   },
   openGraph: {
-    title,
-    description,
-    siteName: "ForceField Partners LLP",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: BRAND_NAME,
     type: "website",
     locale: "en_IN",
-    url: siteUrl,
+    url: PRIMARY_DOMAIN,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: BRAND_NAME,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/twitter-image"],
   },
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "ForceField Partners LLP",
-  description,
-  email: "sandeepmailbox.83@gmail.com",
-  telephone: "+91-9474905990",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Sector V, Salt Lake City",
-    addressLocality: "Kolkata",
-    postalCode: "700091",
-    addressCountry: "IN",
-  },
-  url: siteUrl,
-  sameAs: ["https://www.linkedin.com/company/forcefieldpartners"],
 };
 
 export default function RootLayout({
@@ -84,7 +110,7 @@ export default function RootLayout({
       <body className={`${manrope.variable} ${sora.variable} bg-background text-foreground antialiased`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(rootSchemas) }}
         />
         {children}
       </body>
