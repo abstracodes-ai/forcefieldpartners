@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7fb;
+  --foreground: #0f1c2f;
+  --card: rgba(255, 255, 255, 0.78);
+  --card-foreground: #102036;
+  --muted: #dbe6f0;
+  --muted-foreground: #52627c;
+  --border: rgba(15, 28, 47, 0.12);
+  --primary: #0d2850;
+  --primary-foreground: #f7fbff;
+  --secondary: #10c0d3;
+  --accent: #0f1930;
+  --accent-foreground: #eef7ff;
+  --ring: rgba(16, 192, 211, 0.28);
+  --navy-950: #06101f;
+  --navy-900: #0c1b31;
+  --navy-800: #133057;
+  --teal-500: #0ec4d7;
+  --teal-400: #57e6ef;
+  --surface-dark: rgba(10, 21, 40, 0.76);
+  --surface-light: rgba(255, 255, 255, 0.8);
+  --radius: 1.5rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-sora);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-teal-500: var(--teal-500);
+  --color-teal-400: var(--teal-400);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-light: var(--surface-light);
+  --radius-sm: calc(var(--radius) - 0.5rem);
+  --radius-md: calc(var(--radius) - 0.25rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.5rem);
+  --shadow-forcefield: 0 30px 90px rgba(6, 16, 31, 0.22);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(87, 230, 239, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(19, 48, 87, 0.24), transparent 28%),
+    linear-gradient(180deg, #f8fbfe 0%, #f2f6fa 40%, #eef3f8 100%);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+::selection {
+  background: rgba(16, 192, 211, 0.22);
+  color: #07111f;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(100% - 2rem, 80rem);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 2.75rem 2.75rem;
+}
+
+.bg-grid-light {
+  background-image:
+    linear-gradient(rgba(15, 28, 47, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 28, 47, 0.06) 1px, transparent 1px);
+  background-size: 2.75rem 2.75rem;
+}
+
+.shadow-forcefield {
+  box-shadow: 0 30px 90px rgba(6, 16, 31, 0.22);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+  backdrop-filter: blur(18px);
+}
+
+.dark-panel {
+  background:
+    linear-gradient(180deg, rgba(12, 27, 49, 0.95), rgba(6, 16, 31, 0.92)),
+    rgba(6, 16, 31, 0.8);
+  backdrop-filter: blur(18px);
+}
+
+.field-line {
+  position: relative;
+}
+
+.field-line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(87, 230, 239, 0.56), rgba(14, 36, 67, 0.2), rgba(16, 192, 211, 0.56));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 192, 211, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(16, 192, 211, 0);
+  }
+}
+
+.float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+
+.float-slower {
+  animation: float 9s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulseGlow 3.8s ease-in-out infinite;
+}

@@ -1,0 +1,47 @@
+<svg width="1280" height="360" viewBox="0 0 820 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="28" y1="26" x2="120" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60A9FF" />
+      <stop offset="0.48" stop-color="#27C9EF" />
+      <stop offset="1" stop-color="#6AF0F5" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(6 12)">
+    <path
+      d="M64 14L100 29V63C100 87.5 84.8 109 64 116C43.2 109 28 87.5 28 63V29L64 14Z"
+      stroke="url(#g)"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path d="M64 31V46" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+    <path d="M44 38L54 49" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+    <path d="M84 38L74 49" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+    <path d="M38 60H52" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+    <path d="M76 60H90" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+    <path d="M50 82L58 72" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+    <path d="M78 82L70 72" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <text
+    x="154"
+    y="106"
+    fill="#F7FBFF"
+    font-family="Sora, Manrope, Arial, sans-serif"
+    font-size="76"
+    font-weight="650"
+    letter-spacing="-2.4"
+  >
+    ForceField
+  </text>
+  <text
+    x="158"
+    y="152"
+    fill="#C6D6EA"
+    font-family="Manrope, Arial, sans-serif"
+    font-size="28"
+    font-weight="700"
+    letter-spacing="11"
+  >
+    PARTNERS LLP
+  </text>
+</svg>
