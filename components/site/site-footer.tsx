@@ -43,7 +43,7 @@ export function SiteFooter() {
 
           <div className="grid gap-4 lg:max-w-md">
             <div className="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-              <div className="rounded-[1.2rem] border border-white/10 bg-white/8 p-2.5">
+              <div className="logo-surface rounded-[1.2rem] border p-2.5">
                 <Image
                   src={SITE_ASSETS.primaryCrest}
                   alt="ForceField crest"

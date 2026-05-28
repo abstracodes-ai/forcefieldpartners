@@ -16,7 +16,7 @@ export function LeadCapture() {
   const [open, setOpen] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [triggerLabel, setTriggerLabel] = useState("Live qualification");
+  const [triggerLabel, setTriggerLabel] = useState("Discovery Request");
   const [snoozedUntil, setSnoozedUntil] = useState(0);
   const teaserTimeoutRef = useRef<number | null>(null);
 
@@ -87,7 +87,7 @@ export function LeadCapture() {
       scheduleTeaserReturn(persistedSnooze);
     }
 
-    const openOnTimer = window.setTimeout(() => openCapture("Discovery prompt"), 9000);
+    const openOnTimer = window.setTimeout(() => openCapture("Discovery Request"), 9000);
     const onScroll = () => {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
 
@@ -98,7 +98,7 @@ export function LeadCapture() {
       const progress = window.scrollY / scrollHeight;
 
       if (progress > 0.33) {
-        openCapture("Mid-scroll prompt");
+        openCapture("Operations Intake");
       }
     };
     const onMouseOut = (event: MouseEvent) => {
@@ -107,7 +107,7 @@ export function LeadCapture() {
       }
 
       if (event.clientY <= 10) {
-        openCapture("Exit intent prompt");
+        openCapture("Before You Go");
       }
     };
 
@@ -171,11 +171,11 @@ export function LeadCapture() {
                 </div>
                 <div className="space-y-3">
                   <h3 className="font-display text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
-                    Leave the requirement before you leave the page
+                    Tell ForceField what needs to move
                   </h3>
                   <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                    Best UX here is a short qualification layer, not a forced popup wall. If you close this, the
-                    prompt stays quiet for three minutes before a smaller reminder comes back.
+                    Share a few details and the right team will follow up on field execution, DevOps, MLOps, or
+                    workflow automation.
                   </p>
                 </div>
 
@@ -197,10 +197,12 @@ export function LeadCapture() {
             <div className="field-line rounded-[1.6rem] border border-white/12 bg-navy-950/96 p-4 text-white shadow-forcefield backdrop-blur-md">
               <div className="flex items-start justify-between gap-3">
                 <div className="space-y-2">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">Discovery prompt</p>
-                  <h4 className="font-display text-lg font-semibold tracking-tight">Need field teams or automation support?</h4>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">Discovery request</p>
+                  <h4 className="font-display text-lg font-semibold tracking-tight">
+                    Need field execution, DevOps, or workflow automation support?
+                  </h4>
                   <p className="text-sm leading-6 text-slate-300">
-                    Reopen the lead form and leave the requirement in under a minute.
+                    Reopen the form and send the requirement in under a minute.
                   </p>
                 </div>
                 <button
@@ -214,7 +216,7 @@ export function LeadCapture() {
               </div>
 
               <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                <Button className="sm:flex-1" onClick={() => openCapture("Reopened discovery prompt")}>
+                <Button className="sm:flex-1" onClick={() => openCapture("Discovery Request")}>
                   Open Form
                 </Button>
                 <Button variant="outline" className="sm:flex-1" onClick={() => minimizeCapture()}>

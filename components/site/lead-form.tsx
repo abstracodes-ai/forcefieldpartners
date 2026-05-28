@@ -28,9 +28,9 @@ type LeadPayload = {
 type FormStatus = "idle" | "submitting" | "success" | "manual" | "error";
 
 const segmentOptions = [
-  "Field Execution Partner",
-  "DevOps & Automation",
-  "Both Segments",
+  "ForceField Field Partner",
+  "ForceField DevOps & Automation",
+  "Both service lines",
   "Business Workflow Automation",
 ];
 
@@ -51,7 +51,7 @@ function buildLeadSummary(form: LeadPayload) {
 export function LeadForm({
   source,
   variant = "full",
-  defaultSegment = "Both Segments",
+  defaultSegment = "",
   className,
   onSuccess,
 }: LeadFormProps) {
@@ -94,6 +94,12 @@ export function LeadForm({
     if (!form.email.trim() && !form.phone.trim()) {
       setStatus("error");
       setFeedback("Add either a work email or phone / WhatsApp number.");
+      return;
+    }
+
+    if (!form.segment.trim()) {
+      setStatus("error");
+      setFeedback("Select the service line or execution area you want to discuss.");
       return;
     }
 
@@ -153,7 +159,7 @@ export function LeadForm({
               name="name"
               value={form.name}
               onChange={(event) => setForm((current) => ({ ...current, name: event.target.value }))}
-              placeholder="Name of the operations, sales, or delivery decision-maker"
+              placeholder="Full name"
               autoComplete="name"
             />
           </label>
@@ -166,7 +172,7 @@ export function LeadForm({
               name="company"
               value={form.company}
               onChange={(event) => setForm((current) => ({ ...current, company: event.target.value }))}
-              placeholder="Brand, enterprise, SaaS company, or distributor network name"
+              placeholder="Company or brand name"
               autoComplete="organization"
             />
           </label>
@@ -179,7 +185,7 @@ export function LeadForm({
               name="email"
               value={form.email}
               onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))}
-              placeholder="Work email for field execution, DevOps, or workflow automation discussions"
+              placeholder="name@company.com"
               autoComplete="email"
             />
           </label>
@@ -192,7 +198,7 @@ export function LeadForm({
               name="phone"
               value={form.phone}
               onChange={(event) => setForm((current) => ({ ...current, phone: event.target.value }))}
-              placeholder="+91 WhatsApp number for faster business follow-up"
+              placeholder="+91 98765 43210"
               autoComplete="tel"
             />
           </label>
@@ -205,6 +211,7 @@ export function LeadForm({
               value={form.segment}
               onChange={(event) => setForm((current) => ({ ...current, segment: event.target.value }))}
             >
+              <option value="">Select the service line or execution area</option>
               {segmentOptions.map((option) => (
                 <option key={option} value={option}>
                   {option}
@@ -220,14 +227,14 @@ export function LeadForm({
               name="message"
               value={form.message}
               onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
-              placeholder="Example: need field force outsourcing in East India, DevOps pipeline hardening, MLOps support, or business workflow automation across sales, finance, HR, or support."
+              placeholder="Briefly describe the geography, team, systems, or workflow that needs execution support."
             />
           </label>
         </div>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm leading-6 text-muted-foreground">
-            Best UX for this type of site is a short qualification form, not a long contact sheet.
+            A short intake gets the right ForceField team back to you faster.
           </p>
           <Button type="submit" size={isCompact ? "default" : "lg"} disabled={status === "submitting"}>
             {status === "submitting" ? (

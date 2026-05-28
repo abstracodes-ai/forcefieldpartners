@@ -48,8 +48,8 @@ export default function ServicesPage() {
                 Field execution and digital operations services, separated clearly
               </h1>
               <p className="max-w-3xl text-balance text-base leading-8 text-slate-300 sm:text-lg">
-                Browse the two ForceField operating lines in a format that is useful for both buyers and search
-                engines: field execution on one side, DevOps and workflow automation on the other.
+                Browse the two ForceField operating lines in a format built for decision-makers: field execution on one
+                side, DevOps and workflow automation on the other.
               </p>
             </div>
           </div>

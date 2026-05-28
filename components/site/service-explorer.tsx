@@ -63,7 +63,7 @@ export function ServiceExplorer() {
           <SectionHeading
             eyebrow="Service Catalogue"
             title="Browse the exact execution scope you need"
-            description="The site separates field deployment from digital operations clearly, then lets buyers drill into the service pages that match their real requirement."
+            description="ForceField separates field deployment from digital operations clearly, then lets buyers drill into the service pages that match their real requirement."
           />
         </Reveal>
 
@@ -79,8 +79,8 @@ export function ServiceExplorer() {
                     Clear segmentation without splitting the brand
                   </h3>
                   <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                    Field execution buyers and DevOps buyers do not scan the same way. The filter keeps both paths
-                    visible while keeping the shared ForceField identity intact.
+                    Field execution and DevOps buyers enter with different priorities. The filter keeps both paths
+                    visible while preserving one ForceField identity.
                   </p>
                 </div>
 
@@ -131,13 +131,13 @@ export function ServiceExplorer() {
           <Reveal delay={0.08}>
             <div className="field-line relative overflow-hidden rounded-[2rem] border border-white/70 bg-linear-to-br from-navy-950 via-navy-900 to-[#0f5d73] p-6 text-white shadow-forcefield">
               <div className="absolute -right-12 top-0 h-36 w-36 rounded-full bg-white/12 blur-3xl" />
-              <div className="absolute bottom-0 right-0">
+              <div className="logo-surface absolute bottom-4 right-4 rounded-[1.5rem] border p-3">
                 <Image
                   src={SITE_ASSETS.accentCrest}
                   alt="ForceField shield accent"
                   width={184}
                   height={184}
-                  className="h-auto w-28 opacity-70 sm:w-36"
+                  className="h-auto w-20 opacity-90 sm:w-28"
                 />
               </div>
               <div className="relative max-w-md space-y-5">
@@ -180,7 +180,7 @@ export function ServiceExplorer() {
                 )}
               >
                 <div className="flex items-center gap-4">
-                  <div className="rounded-[1.25rem] border border-navy-900/8 bg-slate-50 p-3">
+                  <div className="logo-surface rounded-[1.25rem] border p-3">
                     <Image
                       src={track.id === "field" ? SITE_ASSETS.fieldCrest : SITE_ASSETS.digitalCrest}
                       alt={`${track.entity} crest`}

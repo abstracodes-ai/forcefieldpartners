@@ -47,11 +47,8 @@ export function BrandLockup({
     <div className={cn("flex items-center", styles.gap, className)}>
       <div
         className={cn(
-          "relative flex shrink-0 items-center justify-center rounded-2xl border backdrop-blur-sm",
+          "logo-surface relative flex shrink-0 items-center justify-center rounded-2xl border backdrop-blur-sm",
           styles.icon,
-          isDark
-            ? "border-white/12 bg-white/4 shadow-lg shadow-cyan-950/16"
-            : "border-navy-900/8 bg-white/88 shadow-lg shadow-slate-950/6",
         )}
       >
         <div className="absolute inset-1 rounded-[0.9rem] bg-linear-to-br from-teal-400/10 to-transparent" />

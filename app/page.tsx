@@ -210,7 +210,7 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-[0.84fr_1.16fr]">
                 <div className="relative px-6 pb-10 pt-8 sm:px-8 lg:px-10 lg:pb-12 lg:pt-10">
                   <div className="mb-6 flex flex-wrap items-center gap-3">
-                    <div className="rounded-[1.1rem] border border-navy-900/10 bg-white p-2.5 shadow-lg shadow-slate-950/5">
+                    <div className="logo-surface rounded-[1.1rem] border p-2.5">
                       <Image
                         src={SITE_ASSETS.primaryCrest}
                         alt="ForceField crest asset"
@@ -228,8 +228,8 @@ export default function HomePage() {
                     </h1>
                     <p className="text-balance text-base leading-8 text-navy-800 sm:text-lg">
                       ForceField Partners LLP helps businesses scale execution from field sales deployment to secure
-                      DevOps, production-grade MLOps, and business workflow automation. The site now makes the two
-                      operating segments explicit: field execution and digital operations.
+                      DevOps, production-grade MLOps, and business workflow automation through two focused operating
+                      lines: field execution and digital operations.
                     </p>
                   </div>
 
@@ -345,7 +345,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Two Clear Segments"
                 title="Separate the field operation from the digital operation"
-                description="This is the clearest way to explain ForceField. One side handles on-ground execution and channel discipline. The other handles DevOps, MLOps, and business workflow automation."
+                description="ForceField operates through two focused lines. One handles on-ground execution and channel discipline. The other handles DevOps, MLOps, and business workflow automation."
                 align="center"
               />
             </Reveal>
@@ -379,11 +379,7 @@ export default function HomePage() {
                           </div>
                         </div>
 
-                        <div
-                          className={`w-fit rounded-[1.5rem] border p-3 ${
-                            isField ? "border-navy-900/10 bg-slate-50" : "border-white/10 bg-white/6"
-                          }`}
-                        >
+                        <div className="logo-surface w-fit rounded-[1.5rem] border p-3">
                           <Image
                             src={segmentCrests[track.id]}
                             alt={`${track.entity} shield asset`}
@@ -458,7 +454,7 @@ export default function HomePage() {
                 {[
                   "Field partner and DevOps partner are presented as separate buying paths",
                   "Workflow automation is treated as an operating capability, not a gimmick",
-                  "Lead capture is short, deliberate, and integrated into the browsing flow",
+                  "Discovery requests are routed to the right operating team",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
                     <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal-600" />
@@ -537,7 +533,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="How We Work"
                 title="A four-step operating model from diagnosis to controlled scale"
-                description="The process is designed to move from operating reality to measurable execution without collapsing into generic consulting language."
+                description="The process is designed to move from operating reality to measurable execution without collapsing into presentation-heavy advisory language."
                 align="center"
               />
             </Reveal>
@@ -585,7 +581,7 @@ export default function HomePage() {
               <div className="grid gap-6">
                 <div className="field-line overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-forcefield sm:p-7">
                   <div className="grid gap-6 sm:grid-cols-[0.78fr_1.22fr] sm:items-center">
-                    <div className="rounded-[1.75rem] border border-white/10 bg-white/8 p-5">
+                    <div className="logo-surface rounded-[1.75rem] border p-5">
                       <Image
                         src={SITE_ASSETS.accentCrest}
                         alt="ForceField accent crest"
@@ -621,9 +617,9 @@ export default function HomePage() {
 
                 <div className="grid gap-4 sm:grid-cols-3">
                   {[
-                    "Responsive by default across mobile decision-makers and desktop buyers",
-                    "Theme shifted toward a more premium, reference-led corporate presentation",
-                    "Lead capture designed to qualify intent without feeling like a spam trap",
+                    "Responsive presentation for mobile decision-makers and desktop buyers",
+                    "Premium corporate identity built around the ForceField shield",
+                    "Discovery intake designed to qualify demand and route follow-up clearly",
                   ].map((item) => (
                     <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-7 text-slate-300">
                       {item}
@@ -644,11 +640,11 @@ export default function HomePage() {
                     <Badge>Contact</Badge>
                     <div className="space-y-4">
                       <h2 className="font-display text-balance text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl lg:text-5xl">
-                        Bring the requirement in while the intent is still warm
+                        Start a focused discovery conversation
                       </h2>
                       <p className="max-w-2xl text-balance text-base leading-8 text-muted-foreground sm:text-lg">
-                        The lead form stays short on purpose. It captures who you are, what segment you need, and what
-                        ForceField should solve first. That is the best UX here for serious B2B leads.
+                        The form captures who you are, which ForceField line you need, and what should be solved first
+                        so the first conversation is specific.
                       </p>
                     </div>
 
@@ -690,7 +686,7 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <LeadForm source="inline-contact" defaultSegment="Both Segments" />
+                    <LeadForm source="inline-contact" />
                   </div>
                 </div>
               </div>

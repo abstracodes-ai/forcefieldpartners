@@ -1,4 +1,4 @@
-import heroScene from "@/assets/ChatGPT Image May 28, 2026, 08_02_15 PM.png";
+import heroScene from "@/assets/forcefield-hero-branded.png";
 import primaryCrest from "@/assets/ChatGPT Image May 28, 2026, 07_52_29 PM (2).png";
 import fieldCrest from "@/assets/ChatGPT Image May 28, 2026, 07_52_29 PM (3).png";
 import digitalCrest from "@/assets/ChatGPT Image May 28, 2026, 07_52_29 PM (1).png";

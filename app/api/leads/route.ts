@@ -94,7 +94,7 @@ export async function POST(request: Request) {
     company: clean(payload.company),
     email: clean(payload.email),
     phone: clean(payload.phone),
-    segment: clean(payload.segment) || "Both Segments",
+    segment: clean(payload.segment) || "Not specified",
     message: clean(payload.message),
     source: clean(payload.source) || "website",
   };
