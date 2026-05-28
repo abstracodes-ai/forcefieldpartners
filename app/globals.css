@@ -172,6 +172,17 @@ button {
   pointer-events: none;
 }
 
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .print\:hidden { display: none !important; }
+  .print\:break-after-page { break-after: page; }
+}
+
 @keyframes float {
   0%,
   100% {

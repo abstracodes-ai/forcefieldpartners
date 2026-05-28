@@ -130,7 +130,7 @@ export function ServiceExplorer() {
           <Reveal delay={0.08}>
             <div className="field-line relative overflow-hidden rounded-[2rem] border border-white/70 bg-linear-to-br from-navy-950 via-navy-900 to-[#0f5d73] p-6 text-white shadow-forcefield">
               <div className="absolute -right-12 top-0 h-36 w-36 rounded-full bg-white/12 blur-3xl" />
-              <div className="absolute bottom-4 right-4 rounded-[1.5rem] border border-white/16 bg-[#07162f] p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+              <div className="absolute bottom-4 right-4 hidden rounded-[1.5rem] border border-white/16 bg-[#07162f] p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)] sm:block">
                 <ForceFieldCrest className="h-auto w-20 opacity-90 sm:w-28" />
               </div>
               <div className="relative max-w-md space-y-5">
