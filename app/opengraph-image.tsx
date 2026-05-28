@@ -59,7 +59,8 @@ export default function OpenGraphImage() {
                 height: "78px",
                 borderRadius: "24px",
                 border: "1px solid rgba(255,255,255,0.16)",
-                background: "rgba(255,255,255,0.05)",
+                background:
+                  "radial-gradient(circle at 32% 18%, rgba(87, 230, 239, 0.18), transparent 34%), linear-gradient(135deg, #06101f 0%, #0b1f3b 56%, #06384f 100%)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
