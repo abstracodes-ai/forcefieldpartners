@@ -153,7 +153,7 @@ export function LeadForm({
               name="name"
               value={form.name}
               onChange={(event) => setForm((current) => ({ ...current, name: event.target.value }))}
-              placeholder="Your full name"
+              placeholder="Name of the operations, sales, or delivery decision-maker"
               autoComplete="name"
             />
           </label>
@@ -166,7 +166,7 @@ export function LeadForm({
               name="company"
               value={form.company}
               onChange={(event) => setForm((current) => ({ ...current, company: event.target.value }))}
-              placeholder="Company / brand"
+              placeholder="Brand, enterprise, SaaS company, or distributor network name"
               autoComplete="organization"
             />
           </label>
@@ -179,7 +179,7 @@ export function LeadForm({
               name="email"
               value={form.email}
               onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))}
-              placeholder="name@company.com"
+              placeholder="Work email for field execution, DevOps, or workflow automation discussions"
               autoComplete="email"
             />
           </label>
@@ -192,7 +192,7 @@ export function LeadForm({
               name="phone"
               value={form.phone}
               onChange={(event) => setForm((current) => ({ ...current, phone: event.target.value }))}
-              placeholder="+91"
+              placeholder="+91 WhatsApp number for faster business follow-up"
               autoComplete="tel"
             />
           </label>
@@ -220,7 +220,7 @@ export function LeadForm({
               name="message"
               value={form.message}
               onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
-              placeholder="Tell ForceField what you need to deploy, automate, or fix."
+              placeholder="Example: need field force outsourcing in East India, DevOps pipeline hardening, MLOps support, or business workflow automation across sales, finance, HR, or support."
             />
           </label>
         </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { SITE_ASSETS } from "@/lib/site-assets";
 import { cn } from "@/lib/utils";
 
 type BrandLockupProps = {
@@ -55,11 +56,11 @@ export function BrandLockup({
       >
         <div className="absolute inset-1 rounded-[0.9rem] bg-linear-to-br from-teal-400/10 to-transparent" />
         <Image
-          src="/brand/forcefield-mark.svg"
+          src={SITE_ASSETS.primaryCrest}
           alt="ForceField shield mark"
-          width={48}
-          height={48}
-          className="relative z-10 h-[70%] w-[70%]"
+          width={72}
+          height={72}
+          className="relative z-10 h-[78%] w-[78%] object-contain"
         />
       </div>
 
@@ -93,7 +94,7 @@ export function BrandLockup({
               isDark ? "text-slate-300" : "text-muted-foreground",
             )}
           >
-            Execution for Field, Cloud &amp; AI
+            Field Partner, DevOps &amp; Workflow Automation
           </div>
         ) : null}
       </div>

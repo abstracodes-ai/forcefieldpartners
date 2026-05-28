@@ -3,19 +3,22 @@ export const PRIMARY_DOMAIN = "https://www.forcefieldpartners.in";
 export const BRAND_NAME = "ForceField Partners LLP";
 export const SITE_TITLE = `${BRAND_NAME} | Field Execution, DevOps & Business Workflow Automation`;
 export const SITE_DESCRIPTION =
-  "ForceField Partners LLP delivers field execution teams, DevOps and MLOps services, and business workflow automation for modern businesses.";
+  "ForceField Partners LLP delivers field execution teams, DevOps and MLOps services, and business workflow automation for growth-focused businesses in India.";
 
 export const SITE_KEYWORDS = [
   "ForceField Partners LLP",
   "field force outsourcing",
+  "field execution partner India",
   "distributor activation",
   "retailer activation",
   "sales training KRA setup",
+  "DevOps services India",
   "DevSecOps services",
   "MLOps services",
   "business workflow automation",
   "workflow automation company India",
   "business workflow automation India",
+  "business workflow automation company India",
   "Kolkata business services",
 ];
 
@@ -76,7 +79,7 @@ export const SERVICE_TRACKS = [
     id: "digital" as const,
     label: "Digital Ops & Automation",
     entity: "ForceField DevOps & Automation",
-    summary: "DevSecOps, MLOps, and business workflow automation for secure scale.",
+    summary: "DevOps, MLOps, and business workflow automation for secure scale.",
     description:
       "Built for businesses that need faster delivery, safer releases, production ML reliability, and automation across business workflows, not just AI demos.",
     bullets: [
@@ -84,7 +87,7 @@ export const SERVICE_TRACKS = [
       "MLOps for deployment, monitoring, and lifecycle continuity",
       "Business workflow automation across sales ops, HR, finance, support, and reporting",
     ],
-    capabilities: ["DevSecOps Services", "MLOps Services", "Business Workflow Automation"],
+    capabilities: ["DevOps Services", "MLOps Services", "Business Workflow Automation"],
   },
 ];
 
@@ -172,7 +175,7 @@ export const SERVICES: ServiceDefinition[] = [
   },
   {
     slug: "devsecops-services",
-    title: "DevSecOps Services",
+    title: "DevOps Services",
     tag: "Secure cloud delivery",
     track: "digital",
     trackLabel: "DevOps & Automation",
@@ -182,7 +185,7 @@ export const SERVICES: ServiceDefinition[] = [
     description:
       "Secure delivery pipelines, policy controls, infrastructure automation, and release governance that reduce friction without compromising trust.",
     seoDescription:
-      "ForceField Partners LLP delivers DevSecOps services for secure release automation, infrastructure consistency, guardrails, and cloud delivery confidence.",
+      "ForceField Partners LLP delivers DevOps services and secure delivery automation for infrastructure consistency, release guardrails, and cloud delivery confidence.",
     heroEyebrow: "Digital Delivery Service",
     deliverables: [
       "CI/CD pipeline design with embedded security controls",
@@ -195,7 +198,7 @@ export const SERVICES: ServiceDefinition[] = [
       "Reducing environment drift and deployment friction",
     ],
     sectors: ["Technology", "SaaS", "Fintech", "Regulated Digital Products"],
-    keywords: ["DevSecOps services", "secure CI/CD", "cloud infrastructure automation"],
+    keywords: ["DevOps services", "DevSecOps services", "secure CI/CD", "cloud infrastructure automation"],
   },
   {
     slug: "mlops-services",
@@ -249,7 +252,7 @@ export const SERVICES: ServiceDefinition[] = [
       "Support, HR, and finance process automation",
     ],
     sectors: ["SaaS", "Services Businesses", "Operations-heavy Teams", "Enterprise Functions"],
-    keywords: ["business workflow automation", "process automation", "AI workflow automation"],
+    keywords: ["business workflow automation", "process automation", "AI workflow automation", "operations automation India"],
   },
 ];
 

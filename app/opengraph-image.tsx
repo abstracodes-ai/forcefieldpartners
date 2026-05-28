@@ -64,16 +64,46 @@ export default function OpenGraphImage() {
                 alignItems: "center",
                 justifyContent: "center",
                 boxShadow: "0 24px 60px rgba(0,0,0,0.2)",
+                overflow: "hidden",
               }}
             >
-              <div
+              <svg
+                width="62"
+                height="62"
+                viewBox="0 0 128 128"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
                 style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "999px",
-                  background: "linear-gradient(135deg, #58E8F0 0%, #12C8D4 100%)",
+                  width: "62px",
+                  height: "62px",
                 }}
-              />
+              >
+                <defs>
+                  <linearGradient id="shield" x1="35" y1="24" x2="89" y2="105" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stopColor="#F2C870" />
+                    <stop offset="1" stopColor="#B07A31" />
+                  </linearGradient>
+                  <linearGradient id="ring" x1="18" y1="64" x2="110" y2="64" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stopColor="#0A8FC6" />
+                    <stop offset="1" stopColor="#31E3DB" />
+                  </linearGradient>
+                </defs>
+                <ellipse cx="64" cy="64" rx="44" ry="32" stroke="url(#ring)" strokeWidth="6" opacity="0.9" />
+                <path
+                  d="M64 22L88 32V59C88 77.3 77.9 93.8 64 101C50.1 93.8 40 77.3 40 59V32L64 22Z"
+                  stroke="url(#shield)"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M54 44H72M54 56H68M54 44V82"
+                  stroke="url(#shield)"
+                  strokeWidth="7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
             <div
               style={{
@@ -115,7 +145,7 @@ export default function OpenGraphImage() {
                 color: "#6AEFF5",
               }}
             >
-              Field Execution • DevSecOps • Workflow Automation
+              Field Execution • DevOps • Workflow Automation
             </div>
             <div
               style={{
@@ -135,7 +165,7 @@ export default function OpenGraphImage() {
                 maxWidth: "920px",
               }}
             >
-              {`${BRAND_NAME} delivers field force outsourcing, DevSecOps, MLOps, and business workflow automation for modern businesses.`}
+              {`${BRAND_NAME} delivers field execution teams, DevOps services, MLOps support, and business workflow automation for modern businesses.`}
             </div>
           </div>
         </div>

@@ -66,6 +66,7 @@ export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   applicationName: BRAND_NAME,
+  category: "Business services",
   manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/",

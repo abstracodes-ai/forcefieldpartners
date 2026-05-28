@@ -13,20 +13,20 @@ import { BRAND_NAME, PRIMARY_DOMAIN, SERVICE_TRACKS, SERVICES } from "@/lib/site
 export const metadata: Metadata = {
   title: `Services | ${BRAND_NAME}`,
   description:
-    "Explore ForceField Partners LLP service lines across field execution, DevSecOps, MLOps, and business workflow automation.",
+    "Explore ForceField Partners LLP service lines across field execution, DevOps, MLOps, and business workflow automation.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
     title: `Services | ${BRAND_NAME}`,
     description:
-      "Explore ForceField Partners LLP service lines across field execution, DevSecOps, MLOps, and business workflow automation.",
+      "Explore ForceField Partners LLP service lines across field execution, DevOps, MLOps, and business workflow automation.",
     url: `${PRIMARY_DOMAIN}/services`,
   },
   twitter: {
     title: `Services | ${BRAND_NAME}`,
     description:
-      "Explore ForceField Partners LLP service lines across field execution, DevSecOps, MLOps, and business workflow automation.",
+      "Explore ForceField Partners LLP service lines across field execution, DevOps, MLOps, and business workflow automation.",
   },
 };
 

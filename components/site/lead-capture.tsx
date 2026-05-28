@@ -2,22 +2,48 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Sparkles, X } from "lucide-react";
-import { useEffect, useEffectEvent, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 
 import { LeadForm } from "@/components/site/lead-form";
 import { Button } from "@/components/ui/button";
 
 const COMPLETED_KEY = "forcefield-lead-capture-completed";
 const TEASER_KEY = "forcefield-lead-capture-teaser";
+const SNOOZE_KEY = "forcefield-lead-capture-snooze-until";
+const SNOOZE_MS = 3 * 60 * 1000;
 
 export function LeadCapture() {
   const [open, setOpen] = useState(false);
   const [showTeaser, setShowTeaser] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [triggerLabel, setTriggerLabel] = useState("Live qualification");
+  const [snoozedUntil, setSnoozedUntil] = useState(0);
+  const teaserTimeoutRef = useRef<number | null>(null);
+
+  const scheduleTeaserReturn = useEffectEvent((resumeAt: number) => {
+    if (teaserTimeoutRef.current) {
+      window.clearTimeout(teaserTimeoutRef.current);
+    }
+
+    const remaining = resumeAt - Date.now();
+
+    if (submitted || remaining <= 0) {
+      if (!submitted && window.sessionStorage.getItem(TEASER_KEY) === "1") {
+        setShowTeaser(true);
+      }
+      return;
+    }
+
+    teaserTimeoutRef.current = window.setTimeout(() => {
+      if (!submitted && window.sessionStorage.getItem(COMPLETED_KEY) !== "1") {
+        window.sessionStorage.setItem(TEASER_KEY, "1");
+        setShowTeaser(true);
+      }
+    }, remaining);
+  });
 
   const openCapture = useEffectEvent((label: string) => {
-    if (submitted || open) {
+    if (submitted || open || Date.now() < snoozedUntil) {
       return;
     }
 
@@ -27,11 +53,14 @@ export function LeadCapture() {
   });
 
   const minimizeCapture = useEffectEvent(() => {
+    const nextSnooze = Date.now() + SNOOZE_MS;
+
     setOpen(false);
-    if (!submitted) {
-      setShowTeaser(true);
-      window.sessionStorage.setItem(TEASER_KEY, "1");
-    }
+    setShowTeaser(false);
+    setSnoozedUntil(nextSnooze);
+    window.sessionStorage.setItem(TEASER_KEY, "1");
+    window.sessionStorage.setItem(SNOOZE_KEY, String(nextSnooze));
+    scheduleTeaserReturn(nextSnooze);
   });
 
   const handleSuccess = useEffectEvent(() => {
@@ -47,8 +76,15 @@ export function LeadCapture() {
       return;
     }
 
-    if (window.sessionStorage.getItem(TEASER_KEY) === "1") {
+    const persistedSnooze = Number(window.sessionStorage.getItem(SNOOZE_KEY) ?? "0");
+    const teaserVisible = window.sessionStorage.getItem(TEASER_KEY) === "1";
+
+    setSnoozedUntil(persistedSnooze);
+
+    if (teaserVisible && persistedSnooze <= Date.now()) {
       setShowTeaser(true);
+    } else if (teaserVisible && persistedSnooze > Date.now()) {
+      scheduleTeaserReturn(persistedSnooze);
     }
 
     const openOnTimer = window.setTimeout(() => openCapture("Discovery prompt"), 9000);
@@ -82,8 +118,11 @@ export function LeadCapture() {
       window.clearTimeout(openOnTimer);
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener("mouseout", onMouseOut);
+      if (teaserTimeoutRef.current) {
+        window.clearTimeout(teaserTimeoutRef.current);
+      }
     };
-  }, [openCapture]);
+  }, [openCapture, scheduleTeaserReturn]);
 
   useEffect(() => {
     if (!open) {
@@ -135,8 +174,8 @@ export function LeadCapture() {
                     Leave the requirement before you leave the page
                   </h3>
                   <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                    Best UX here is a short qualification layer, not a forced popup wall. If you minimize this, the
-                    site keeps a small discovery teaser visible until the request is submitted.
+                    Best UX here is a short qualification layer, not a forced popup wall. If you close this, the
+                    prompt stays quiet for three minutes before a smaller reminder comes back.
                   </p>
                 </div>
 
@@ -166,7 +205,7 @@ export function LeadCapture() {
                 </div>
                 <button
                   type="button"
-                  onClick={() => setShowTeaser(false)}
+                  onClick={() => minimizeCapture()}
                   className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-white/10 text-slate-300"
                   aria-label="Hide teaser"
                 >
@@ -178,7 +217,7 @@ export function LeadCapture() {
                 <Button className="sm:flex-1" onClick={() => openCapture("Reopened discovery prompt")}>
                   Open Form
                 </Button>
-                <Button variant="outline" className="sm:flex-1" onClick={() => setShowTeaser(false)}>
+                <Button variant="outline" className="sm:flex-1" onClick={() => minimizeCapture()}>
                   Keep Browsing
                 </Button>
               </div>

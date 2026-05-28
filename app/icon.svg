@@ -1,23 +1,28 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="g" x1="24" y1="18" x2="106" y2="110" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0B2A52" />
-      <stop offset="1" stop-color="#10D1D9" />
+    <linearGradient id="shield" x1="35" y1="24" x2="89" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F2C870" />
+      <stop offset="1" stop-color="#B07A31" />
+    </linearGradient>
+    <linearGradient id="ring" x1="18" y1="64" x2="110" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A8FC6" />
+      <stop offset="1" stop-color="#31E3DB" />
     </linearGradient>
   </defs>
   <rect width="128" height="128" rx="32" fill="#07111F" />
+  <ellipse cx="64" cy="64" rx="44" ry="32" stroke="url(#ring)" stroke-width="6" opacity="0.9" />
   <path
-    d="M64 14L100 29V63C100 87.5 84.8 109 64 116C43.2 109 28 87.5 28 63V29L64 14Z"
-    stroke="url(#g)"
-    stroke-width="8"
+    d="M64 22L88 32V59C88 77.3 77.9 93.8 64 101C50.1 93.8 40 77.3 40 59V32L64 22Z"
+    stroke="url(#shield)"
+    stroke-width="6"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
-  <path d="M64 31V46" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
-  <path d="M44 38L54 49" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
-  <path d="M84 38L74 49" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
-  <path d="M38 60H52" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
-  <path d="M76 60H90" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
-  <path d="M50 82L58 72" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
-  <path d="M78 82L70 72" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+  <path
+    d="M54 44H72M54 56H68M54 44V82"
+    stroke="url(#shield)"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>
