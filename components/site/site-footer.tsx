@@ -5,7 +5,7 @@ import { BrandLockup } from "@/components/site/brand-lockup";
 import { SITE_ASSETS } from "@/lib/site-assets";
 
 const links = [
-  { label: "Segments", href: "/#divisions" },
+  { label: "Field + DevOps", href: "/#divisions" },
   { label: "Services", href: "/#services" },
   { label: "Why ForceField", href: "/#why-forcefield" },
   { label: "Industries", href: "/#sectors" },

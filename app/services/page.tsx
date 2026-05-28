@@ -8,25 +8,26 @@ import { SiteHeader } from "@/components/site/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BRAND_NAME, PRIMARY_DOMAIN, SERVICE_TRACKS, SERVICES } from "@/lib/site-content";
+import { BRAND_NAME, PRIMARY_DOMAIN, SERVICE_TRACKS, SERVICES, SITE_KEYWORDS } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: `Services | ${BRAND_NAME}`,
   description:
-    "Explore ForceField Partners LLP service lines across field execution, DevOps, MLOps, and business workflow automation.",
+    "Explore ForceField Partners LLP services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
+  keywords: SITE_KEYWORDS,
   alternates: {
     canonical: "/services",
   },
   openGraph: {
     title: `Services | ${BRAND_NAME}`,
     description:
-      "Explore ForceField Partners LLP service lines across field execution, DevOps, MLOps, and business workflow automation.",
+      "Explore ForceField Partners LLP services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
     url: `${PRIMARY_DOMAIN}/services`,
   },
   twitter: {
     title: `Services | ${BRAND_NAME}`,
     description:
-      "Explore ForceField Partners LLP service lines across field execution, DevOps, MLOps, and business workflow automation.",
+      "Explore ForceField Partners LLP services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
   },
 };
 
@@ -42,14 +43,14 @@ export default function ServicesPage() {
           <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-blue-500/16 blur-3xl" />
 
           <div className="container relative space-y-8">
-            <Badge variant="dark">Service Index</Badge>
+            <Badge variant="dark">ForceField Services</Badge>
             <div className="max-w-4xl space-y-5">
               <h1 className="font-display text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Field execution and digital operations services, separated clearly
+                Field Partner, DevOps, MLOps, and workflow automation services
               </h1>
               <p className="max-w-3xl text-balance text-base leading-8 text-slate-300 sm:text-lg">
-                Browse the two ForceField operating lines in a format built for decision-makers: field execution on one
-                side, DevOps and workflow automation on the other.
+                Choose ForceField Field Partner for market execution and channel activation. Choose ForceField DevOps
+                & Automation for secure delivery, production ML operations, and business process automation.
               </p>
             </div>
           </div>
@@ -58,9 +59,9 @@ export default function ServicesPage() {
         <section className="py-18 sm:py-22 lg:py-24">
           <div className="container space-y-12">
             <SectionHeading
-              eyebrow="Operating Lines"
-              title="Two entry points under one parent brand"
-              description="The Field Partner line is built for physical market execution. The DevOps and Automation line is built for cloud delivery, production ML, and business workflow automation."
+              eyebrow="Execution Lines"
+              title="Two specialist operating lines"
+              description="ForceField Field Partner handles field force outsourcing, retailer activation, distributor movement, and sales performance systems. ForceField DevOps & Automation handles secure delivery, MLOps, and workflow automation across business teams."
             />
 
             <div className="grid gap-6 xl:grid-cols-2">
@@ -121,11 +122,11 @@ export default function ServicesPage() {
               <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
                 <div className="space-y-4">
                   <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
-                    Need both field execution and digital operations support?
+                    Need both ForceField operating lines on one mandate?
                   </h2>
                   <p className="text-base leading-7 text-muted-foreground">
-                    ForceField is designed to operate across both physical and digital execution surfaces. Many businesses
-                    need disciplined field rollout and internal workflow automation at the same time.
+                    ForceField can combine Field Partner execution with DevOps & Automation delivery when a rollout
+                    needs market coverage, reliable systems, and automated internal workflows at the same time.
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">

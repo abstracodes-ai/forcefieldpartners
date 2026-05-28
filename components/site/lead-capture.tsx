@@ -202,7 +202,7 @@ export function LeadCapture() {
                     Need field execution, DevOps, or workflow automation support?
                   </h4>
                   <p className="text-sm leading-6 text-slate-300">
-                    Reopen the form and send the requirement in under a minute.
+                    Share the requirement and the right ForceField team will follow up.
                   </p>
                 </div>
                 <button

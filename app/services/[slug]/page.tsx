@@ -193,11 +193,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 Where it fits
               </div>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
-                Best suited for teams that need disciplined execution, not presentation-heavy consulting
+                Built for operating teams with measurable targets
               </h2>
               <p className="text-base leading-7 text-muted-foreground">
-                ForceField services are structured for real operating environments where clarity, control, and measurable
-                follow-through matter more than presentation-heavy advisory decks.
+                ForceField services are structured for environments where coverage, release reliability, workflow
+                throughput, and measurable follow-through matter.
               </p>
             </div>
 

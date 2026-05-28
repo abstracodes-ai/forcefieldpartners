@@ -70,7 +70,7 @@ export function LeadForm({
   const isCompact = variant === "compact";
   const contactSummary = useMemo(() => buildLeadSummary(form), [form]);
   const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent(`Discovery request from ${form.company || form.name || "website visitor"}`);
+    const subject = encodeURIComponent(`ForceField discovery request from ${form.company || form.name || "business inquiry"}`);
     const body = encodeURIComponent(contactSummary);
 
     return `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
@@ -87,7 +87,7 @@ export function LeadForm({
 
     if (!form.name.trim() || !form.company.trim()) {
       setStatus("error");
-      setFeedback("Add your name and company so the team can qualify the request.");
+      setFeedback("Add your name and company so ForceField can respond with the right operating context.");
       return;
     }
 
@@ -135,7 +135,7 @@ export function LeadForm({
 
       if (response.status === 503 || result.code === "delivery_not_configured") {
         setStatus("manual");
-        setFeedback("Automatic lead delivery is not configured yet. Use email or WhatsApp below to send this request now.");
+        setFeedback("The form could not submit automatically. Send the same requirement by email or WhatsApp below.");
         return;
       }
 
@@ -204,14 +204,14 @@ export function LeadForm({
           </label>
 
           <label className={cn("space-y-2", !isCompact && "sm:col-span-2")}>
-            <span className="text-sm font-semibold text-navy-900">Interested In</span>
+            <span className="text-sm font-semibold text-navy-900">Operating Line</span>
             <select
               className="input-surface"
               name="segment"
               value={form.segment}
               onChange={(event) => setForm((current) => ({ ...current, segment: event.target.value }))}
             >
-              <option value="">Select the service line or execution area</option>
+              <option value="">Select Field Partner, DevOps & Automation, or workflow automation</option>
               {segmentOptions.map((option) => (
                 <option key={option} value={option}>
                   {option}
@@ -234,7 +234,7 @@ export function LeadForm({
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm leading-6 text-muted-foreground">
-            A short intake gets the right ForceField team back to you faster.
+            ForceField will route this to the field, DevOps, MLOps, or automation team that matches the requirement.
           </p>
           <Button type="submit" size={isCompact ? "default" : "lg"} disabled={status === "submitting"}>
             {status === "submitting" ? (
@@ -266,7 +266,7 @@ export function LeadForm({
 
       {status === "manual" ? (
         <div className="space-y-3 rounded-[1.4rem] border border-amber-500/18 bg-amber-500/8 p-4 text-sm text-amber-900">
-          <p className="font-semibold">Use a direct route for this lead</p>
+          <p className="font-semibold">Send through email or WhatsApp</p>
           <p>{feedback}</p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button asChild variant="secondary">

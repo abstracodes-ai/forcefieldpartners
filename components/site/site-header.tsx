@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { label: "Segments", href: "/#divisions" },
+  { label: "Field + DevOps", href: "/#divisions" },
   { label: "Services", href: "/#services" },
   { label: "Why ForceField", href: "/#why-forcefield" },
   { label: "Industries", href: "/#sectors" },

@@ -34,9 +34,9 @@ const iconMap: Record<ServiceIconKey, typeof Users> = {
 };
 
 const filterOptions: Array<{ id: FilterId; label: string; description: string }> = [
-  { id: "all", label: "All Services", description: "Browse the entire ForceField execution stack." },
-  { id: "field", label: "Field Partner", description: "Ground-force teams, channel activation, and KRAs." },
-  { id: "digital", label: "DevOps & Automation", description: "Cloud delivery, MLOps, and workflow automation." },
+  { id: "all", label: "All Services", description: "View field, DevOps, MLOps, and workflow automation services together." },
+  { id: "field", label: "ForceField Field Partner", description: "Field force teams, channel activation, retail coverage, and KRAs." },
+  { id: "digital", label: "ForceField DevOps & Automation", description: "Secure cloud delivery, MLOps, and business process automation." },
 ];
 
 const automationScopes = [
@@ -61,9 +61,9 @@ export function ServiceExplorer() {
       <div className="container space-y-10">
         <Reveal>
           <SectionHeading
-            eyebrow="Service Catalogue"
-            title="Browse the exact execution scope you need"
-            description="ForceField separates field deployment from digital operations clearly, then lets buyers drill into the service pages that match their real requirement."
+            eyebrow="ForceField Services"
+            title="Choose the operating line that matches the mandate"
+            description="Use ForceField Field Partner for feet-on-ground growth execution. Use ForceField DevOps & Automation for secure cloud delivery, MLOps, and business process automation."
           />
         </Reveal>
 
@@ -73,14 +73,14 @@ export function ServiceExplorer() {
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="max-w-2xl space-y-3">
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-600">
-                    Filter by segment
+                    Choose operating line
                   </p>
                   <h3 className="font-display text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
-                    Clear segmentation without splitting the brand
+                    Select the right ForceField line
                   </h3>
                   <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                    Field execution and DevOps buyers enter with different priorities. The filter keeps both paths
-                    visible while preserving one ForceField identity.
+                    Field programs need coverage, supervision, and outlet-level reporting. Digital programs need
+                    secure releases, reliable ML operations, and automated handoffs across teams.
                   </p>
                 </div>
 
@@ -143,7 +143,7 @@ export function ServiceExplorer() {
               <div className="relative max-w-md space-y-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-200">
                   <ShieldCheck className="size-3.5" />
-                  Workflow automation is broader than AI chat
+                  Workflow automation across the business
                 </div>
                 <div className="space-y-3">
                   <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">

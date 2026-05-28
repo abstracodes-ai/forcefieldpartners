@@ -1,24 +1,32 @@
 export const PRIMARY_DOMAIN = "https://www.forcefieldpartners.in";
 
 export const BRAND_NAME = "ForceField Partners LLP";
-export const SITE_TITLE = `${BRAND_NAME} | Field Execution, DevOps & Business Workflow Automation`;
+export const SITE_TITLE = `${BRAND_NAME} | Field Force, DevOps, MLOps & Workflow Automation India`;
 export const SITE_DESCRIPTION =
-  "ForceField Partners LLP delivers field execution teams, DevOps and MLOps services, and business workflow automation for growth-focused businesses in India.";
+  "ForceField Partners LLP is a Kolkata-based business services company delivering field force outsourcing, retailer and distributor activation, DevOps, MLOps, and business workflow automation across India.";
 
 export const SITE_KEYWORDS = [
   "ForceField Partners LLP",
+  "ForceField Partners",
+  "ForceField",
+  "Force Field Partners",
   "field force outsourcing",
+  "field force management",
   "field execution partner India",
+  "field operations partner India",
   "distributor activation",
   "retailer activation",
   "sales training KRA setup",
   "DevOps services India",
   "DevSecOps services",
   "MLOps services",
+  "AI workflow automation",
   "business workflow automation",
   "workflow automation company India",
   "business workflow automation India",
   "business workflow automation company India",
+  "Kolkata DevOps services",
+  "Kolkata workflow automation company",
   "Kolkata business services",
 ];
 
@@ -77,11 +85,11 @@ export const SERVICE_TRACKS = [
   },
   {
     id: "digital" as const,
-    label: "Digital Ops & Automation",
+    label: "DevOps & Automation Partner",
     entity: "ForceField DevOps & Automation",
     summary: "DevOps, MLOps, and business workflow automation for secure scale.",
     description:
-      "Built for businesses that need faster delivery, safer releases, production ML reliability, and automation across business workflows, not just AI demos.",
+      "Built for businesses that need faster software delivery, safer releases, production ML reliability, and automation across practical business workflows.",
     bullets: [
       "Secure cloud delivery and release governance",
       "MLOps for deployment, monitoring, and lifecycle continuity",

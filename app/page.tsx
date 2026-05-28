@@ -155,10 +155,10 @@ const workSteps = [
 ];
 
 const aboutPoints = [
-  "Two distinct operating segments under one execution-focused brand",
-  "Any business workflow automation, not just AI demos or chat interfaces",
-  "Secure delivery discipline across cloud, AI, and business operations",
-  "Operating structures designed for scale, accountability, and measurable follow-through",
+  "ForceField Field Partner for territory coverage, channel activation, and KRA-led field teams",
+  "ForceField DevOps & Automation for release discipline, MLOps, and business process automation",
+  "Workflow automation across sales, finance, HR, reporting, support, and internal operations",
+  "Operating structures built for scale, accountability, and measurable follow-through",
 ];
 
 const contactCards = [
@@ -228,8 +228,8 @@ export default function HomePage() {
                     </h1>
                     <p className="text-balance text-base leading-8 text-navy-800 sm:text-lg">
                       ForceField Partners LLP helps businesses scale execution from field sales deployment to secure
-                      DevOps, production-grade MLOps, and business workflow automation through two focused operating
-                      lines: field execution and digital operations.
+                      DevOps, production-grade MLOps, and business workflow automation through ForceField Field Partner
+                      and ForceField DevOps &amp; Automation.
                     </p>
                   </div>
 
@@ -263,7 +263,7 @@ export default function HomePage() {
                         <div className="flex size-10 items-center justify-center rounded-2xl bg-teal-500/10 text-teal-700">
                           <Workflow className="size-5" />
                         </div>
-                        <p className="text-sm font-semibold text-navy-950">DevOps &amp; Automation</p>
+                        <p className="text-sm font-semibold text-navy-950">ForceField DevOps &amp; Automation</p>
                       </div>
                       <p className="text-sm leading-6 text-muted-foreground">
                         DevOps, MLOps, AI-enabled delivery, and any business workflow automation.
@@ -343,9 +343,9 @@ export default function HomePage() {
           <div className="container space-y-12">
             <Reveal>
               <SectionHeading
-                eyebrow="Two Clear Segments"
-                title="Separate the field operation from the digital operation"
-                description="ForceField operates through two focused lines. One handles on-ground execution and channel discipline. The other handles DevOps, MLOps, and business workflow automation."
+                eyebrow="Field Partner + DevOps Partner"
+                title="Two execution engines under one ForceField brand"
+                description="ForceField Field Partner runs market deployment, channel activation, sales training, and KRA-led field performance. ForceField DevOps & Automation runs secure delivery, MLOps, and workflow automation across business functions."
                 align="center"
               />
             </Reveal>
@@ -428,7 +428,7 @@ export default function HomePage() {
                           </Link>
                         </Button>
                         <Button asChild variant={isField ? "secondary" : "outline"} size="lg">
-                          <Link href="#contact">Discuss This Segment</Link>
+                          <Link href="#contact">Discuss This Line</Link>
                         </Button>
                       </div>
                     </div>
@@ -452,9 +452,9 @@ export default function HomePage() {
 
               <div className="mt-8 space-y-4">
                 {[
-                  "Field partner and DevOps partner are presented as separate buying paths",
-                  "Workflow automation is treated as an operating capability, not a gimmick",
-                  "Discovery requests are routed to the right operating team",
+                  "ForceField Field Partner handles market coverage, channel activation, sales training, and KRA control",
+                  "ForceField DevOps & Automation handles DevOps, MLOps, release governance, and process automation",
+                  "Requests are routed to the ForceField team that matches the mandate",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
                     <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal-600" />
@@ -533,7 +533,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="How We Work"
                 title="A four-step operating model from diagnosis to controlled scale"
-                description="The process is designed to move from operating reality to measurable execution without collapsing into presentation-heavy advisory language."
+                description="ForceField starts with the operating bottleneck, defines the execution model, deploys the right field or digital capability, and keeps improvement tied to measurable outcomes."
                 align="center"
               />
             </Reveal>
@@ -563,7 +563,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="About ForceField"
                 title="Execution-focused by design"
-                description="ForceField Partners LLP operates where businesses need reliable follow-through, not just advisory language. The company brings structure to field growth, digital delivery, ML systems, and business automation."
+                description="ForceField Partners LLP operates from Kolkata for businesses that need stronger market execution, safer software delivery, dependable ML operations, and automated business workflows across India."
                 dark
               />
 
@@ -600,15 +600,15 @@ export default function HomePage() {
                       <div className="space-y-3 text-sm leading-7 text-slate-300">
                         <div className="flex items-start gap-3">
                           <Target className="mt-1 size-5 shrink-0 text-teal-300" />
-                          <span>Field motion, cloud delivery, and business operations tied into one execution view.</span>
+                          <span>Field coverage, cloud delivery, and business workflows connected to measurable operating targets.</span>
                         </div>
                         <div className="flex items-start gap-3">
                           <CloudCog className="mt-1 size-5 shrink-0 text-teal-300" />
-                          <span>DevOps and workflow automation treated as operating systems, not disconnected projects.</span>
+                          <span>DevOps, MLOps, and automation built around release control, reliability, and throughput.</span>
                         </div>
                         <div className="flex items-start gap-3">
                           <Waypoints className="mt-1 size-5 shrink-0 text-teal-300" />
-                          <span>Clear separation of the two segments so buyers know exactly where to enter.</span>
+                          <span>Field Partner and DevOps & Automation routes kept distinct from first conversation to delivery.</span>
                         </div>
                       </div>
                     </div>
@@ -617,9 +617,9 @@ export default function HomePage() {
 
                 <div className="grid gap-4 sm:grid-cols-3">
                   {[
-                    "Responsive presentation for mobile decision-makers and desktop buyers",
-                    "Premium corporate identity built around the ForceField shield",
-                    "Discovery intake designed to qualify demand and route follow-up clearly",
+                    "Field teams structured for coverage, supervision, outlet reporting, and KRA accountability",
+                    "DevOps and MLOps delivery built around secure releases, observability, and operational reliability",
+                    "Business workflow automation for approvals, handoffs, reporting, support, HR, finance, and sales ops",
                   ].map((item) => (
                     <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-7 text-slate-300">
                       {item}
@@ -640,11 +640,11 @@ export default function HomePage() {
                     <Badge>Contact</Badge>
                     <div className="space-y-4">
                       <h2 className="font-display text-balance text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl lg:text-5xl">
-                        Start a focused discovery conversation
+                        Discuss the execution mandate
                       </h2>
                       <p className="max-w-2xl text-balance text-base leading-8 text-muted-foreground sm:text-lg">
-                        The form captures who you are, which ForceField line you need, and what should be solved first
-                        so the first conversation is specific.
+                        Share the market, system, or workflow you want ForceField to strengthen. The right operating
+                        line will follow up with a practical next step.
                       </p>
                     </div>
 
@@ -676,7 +676,7 @@ export default function HomePage() {
                   <div className="rounded-[2rem] border border-navy-900/10 bg-slate-50 p-5 sm:p-6">
                     <div className="mb-5 space-y-2">
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-600">
-                        Discovery form
+                        Execution inquiry
                       </p>
                       <h3 className="font-display text-2xl font-semibold tracking-tight text-navy-950">
                         Tell ForceField what needs to move
