@@ -4,6 +4,7 @@ node_modules
 dist
 coverage
 *.log
+wget-log*
 .DS_Store
 .env
 .env.local

@@ -1,12 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { BrandLockup } from "@/components/site/brand-lockup";
+import { SITE_ASSETS } from "@/lib/site-assets";
 
 const links = [
-  { label: "Divisions", href: "/#divisions" },
+  { label: "Segments", href: "/#divisions" },
   { label: "Services", href: "/#services" },
   { label: "Why ForceField", href: "/#why-forcefield" },
-  { label: "Sectors", href: "/#sectors" },
+  { label: "Industries", href: "/#sectors" },
   { label: "How We Work", href: "/#how-we-work" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
@@ -20,23 +22,48 @@ export function SiteFooter() {
           <div className="max-w-xl space-y-5">
             <BrandLockup mode="dark" size="lg" showSubtitle />
             <p className="max-w-lg text-sm leading-7 text-slate-300">
-              Execution-focused operating partner for field deployment, secure cloud delivery, MLOps, and business
-              workflow automation.
+              Execution-focused operating partner for field deployment, DevOps and MLOps delivery, and business
+              workflow automation across operational teams.
             </p>
-            <div className="flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">Field Force</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">DevSecOps</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">MLOps</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">Workflow Automation</span>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="rounded-[1.35rem] border border-white/10 bg-white/5 p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">Field Partner</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  Deployment teams, retailer activation, and field performance systems.
+                </p>
+              </div>
+              <div className="rounded-[1.35rem] border border-white/10 bg-white/5 p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">DevOps & Automation</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  DevOps, MLOps, and workflow automation for modern operating environments.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="grid gap-2 text-sm text-slate-300 sm:grid-cols-2 lg:grid-cols-3 lg:text-right">
-            {links.map((link) => (
-              <Link key={link.href} href={link.href} className="font-medium hover:text-white">
-                {link.label}
-              </Link>
-            ))}
+          <div className="grid gap-4 lg:max-w-md">
+            <div className="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+              <div className="rounded-[1.2rem] border border-white/10 bg-white/8 p-2.5">
+                <Image
+                  src={SITE_ASSETS.primaryCrest}
+                  alt="ForceField crest"
+                  width={72}
+                  height={72}
+                  className="h-auto w-14"
+                />
+              </div>
+              <div className="text-sm leading-6 text-slate-300">
+                Built for India-first operations that need stronger field control and more disciplined digital delivery.
+              </div>
+            </div>
+
+            <div className="grid gap-2 text-sm text-slate-300 sm:grid-cols-2 lg:text-right">
+              {links.map((link) => (
+                <Link key={link.href} href={link.href} className="font-medium hover:text-white">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 

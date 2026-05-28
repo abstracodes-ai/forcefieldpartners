@@ -1,9 +1,9 @@
 export const PRIMARY_DOMAIN = "https://www.forcefieldpartners.in";
 
 export const BRAND_NAME = "ForceField Partners LLP";
-export const SITE_TITLE = `${BRAND_NAME} | Field Execution, DevSecOps & Workflow Automation`;
+export const SITE_TITLE = `${BRAND_NAME} | Field Execution, DevOps & Business Workflow Automation`;
 export const SITE_DESCRIPTION =
-  "ForceField Partners LLP delivers field force outsourcing, distributor activation, DevSecOps, MLOps, and business workflow automation for modern businesses.";
+  "ForceField Partners LLP delivers field execution teams, DevOps and MLOps services, and business workflow automation for modern businesses.";
 
 export const SITE_KEYWORDS = [
   "ForceField Partners LLP",
@@ -15,6 +15,7 @@ export const SITE_KEYWORDS = [
   "MLOps services",
   "business workflow automation",
   "workflow automation company India",
+  "business workflow automation India",
   "Kolkata business services",
 ];
 
@@ -93,7 +94,7 @@ export const SERVICES: ServiceDefinition[] = [
     title: "Field Force Outsourcing",
     tag: "Ground execution",
     track: "field",
-    trackLabel: "Field Entity",
+    trackLabel: "Field Partner",
     entityName: "ForceField Field Partner",
     iconKey: "users",
     summary: "Dedicated field execution teams for territory coverage, market reach, and accountable last-mile performance.",
@@ -120,7 +121,7 @@ export const SERVICES: ServiceDefinition[] = [
     title: "Distributor & Retailer Activation",
     tag: "Channel growth",
     track: "field",
-    trackLabel: "Field Entity",
+    trackLabel: "Field Partner",
     entityName: "ForceField Field Partner",
     iconKey: "store",
     summary: "Channel activation programs that improve distributor movement, retailer engagement, and in-market execution quality.",
@@ -147,7 +148,7 @@ export const SERVICES: ServiceDefinition[] = [
     title: "Sales Training & KRA Setup",
     tag: "Performance systems",
     track: "field",
-    trackLabel: "Field Entity",
+    trackLabel: "Field Partner",
     entityName: "ForceField Field Partner",
     iconKey: "graduationCap",
     summary: "Sales enablement systems with onboarding, KRAs, and performance management for field teams.",
@@ -174,7 +175,7 @@ export const SERVICES: ServiceDefinition[] = [
     title: "DevSecOps Services",
     tag: "Secure cloud delivery",
     track: "digital",
-    trackLabel: "DevOps Entity",
+    trackLabel: "DevOps & Automation",
     entityName: "ForceField DevOps & Automation",
     iconKey: "cloudCog",
     summary: "Secure cloud delivery pipelines, infrastructure automation, and release governance for modern engineering teams.",
@@ -201,7 +202,7 @@ export const SERVICES: ServiceDefinition[] = [
     title: "MLOps Services",
     tag: "Model operations",
     track: "digital",
-    trackLabel: "DevOps Entity",
+    trackLabel: "DevOps & Automation",
     entityName: "ForceField DevOps & Automation",
     iconKey: "brainCircuit",
     summary: "Production-grade deployment, monitoring, and lifecycle management for machine learning systems.",
@@ -228,7 +229,7 @@ export const SERVICES: ServiceDefinition[] = [
     title: "Business Workflow Automation",
     tag: "Business automation",
     track: "digital",
-    trackLabel: "DevOps Entity",
+    trackLabel: "DevOps & Automation",
     entityName: "ForceField DevOps & Automation",
     iconKey: "workflow",
     summary: "Automation for approvals, reporting, CRM handoffs, support workflows, HR operations, finance ops, and AI-assisted business processes.",
