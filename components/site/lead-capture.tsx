@@ -42,8 +42,12 @@ export function LeadCapture() {
     }, remaining);
   });
 
-  const openCapture = useEffectEvent((label: string) => {
+  const openCapture = useEffectEvent((label: string, intent: "auto" | "manual" = "auto") => {
     if (submitted || open || Date.now() < snoozedUntil) {
+      return;
+    }
+
+    if (intent === "auto" && window.innerWidth < 640) {
       return;
     }
 
@@ -143,17 +147,19 @@ export function LeadCapture() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="fixed inset-0 z-[70] flex items-end bg-navy-950/55 p-4 backdrop-blur-sm sm:items-center sm:justify-center"
+            className="fixed inset-0 z-[70] flex items-end bg-navy-950/55 p-2 backdrop-blur-sm sm:items-center sm:justify-center sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => minimizeCapture()}
           >
             <motion.div
               initial={{ opacity: 0, y: 28, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 24, scale: 0.98 }}
               transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-              className="field-line relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-white/75 bg-white p-5 shadow-forcefield sm:p-6"
+              className="field-line relative w-full max-w-xl max-h-[92vh] overflow-hidden rounded-[2rem] border border-white/75 bg-white p-5 shadow-forcefield sm:p-6"
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 type="button"
@@ -164,7 +170,7 @@ export function LeadCapture() {
                 <X className="size-5" />
               </button>
 
-              <div className="space-y-5 pr-10">
+              <div className="max-h-[calc(92vh-2.5rem)] space-y-5 overflow-y-auto overscroll-contain pr-2 sm:pr-10">
                 <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/16 bg-teal-500/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-600">
                   <Sparkles className="size-3.5" />
                   {triggerLabel}
@@ -216,7 +222,7 @@ export function LeadCapture() {
               </div>
 
               <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                <Button className="sm:flex-1" onClick={() => openCapture("Discovery Request")}>
+                <Button className="sm:flex-1" onClick={() => openCapture("Discovery Request", "manual")}>
                   Open Form
                 </Button>
                 <Button variant="outline" className="sm:flex-1" onClick={() => minimizeCapture()}>

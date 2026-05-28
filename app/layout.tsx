@@ -18,6 +18,78 @@ const sora = Sora({
 const rootSchemas = [
   {
     "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${PRIMARY_DOMAIN}/#localbusiness`,
+    name: BRAND_NAME,
+    legalName: BRAND_NAME,
+    description: SITE_DESCRIPTION,
+    url: PRIMARY_DOMAIN,
+    telephone: COMPANY.phone,
+    email: COMPANY.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Sector V, Salt Lake City",
+      addressLocality: "Kolkata",
+      addressRegion: "West Bengal",
+      postalCode: "700091",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 22.5773,
+      longitude: 88.4322,
+    },
+    areaServed: { "@type": "Country", name: "India" },
+    sameAs: [COMPANY.linkedin],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What services does ForceField Partners LLP offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ForceField Partners LLP offers two service lines: ForceField Field Partner (field force outsourcing, distributor and retailer activation, sales training and KRA setup) and ForceField DevOps & Automation (DevOps, MLOps, and business workflow automation).",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where is ForceField Partners LLP located?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ForceField Partners LLP is headquartered at Sector V, Salt Lake City, Kolkata 700091, West Bengal, India, and supports pan-India operations.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does ForceField Partners LLP work pan-India?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. ForceField Partners LLP supports field force deployment, distributor activation, and operational delivery across distributed markets throughout India.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is ForceField Field Partner?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ForceField Field Partner provides territory coverage, retailer and distributor activation, sales training, and KRA-led performance management for brands that need ground-force execution across Indian markets.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is ForceField DevOps & Automation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ForceField DevOps & Automation delivers DevOps services, MLOps for production-grade machine learning operations, and workflow automation across business functions including sales, finance, HR, reporting, and support.",
+        },
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${PRIMARY_DOMAIN}/#organization`,
     name: BRAND_NAME,

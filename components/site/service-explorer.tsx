@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { startTransition, useState } from "react";
 import {
@@ -15,10 +14,10 @@ import {
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { ForceFieldCrest } from "@/components/site/forcefield-crest";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SITE_ASSETS } from "@/lib/site-assets";
 import { SERVICE_TRACKS, SERVICES, type ServiceIconKey, type TrackId } from "@/lib/site-content";
 import { cn } from "@/lib/utils";
 
@@ -67,7 +66,7 @@ export function ServiceExplorer() {
           />
         </Reveal>
 
-        <div className="grid gap-5 xl:grid-cols-[1.06fr_0.94fr]">
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[53%_47%]">
           <Reveal>
             <div className="field-line rounded-[2rem] border border-white/70 bg-white p-5 shadow-forcefield sm:p-6">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
@@ -131,14 +130,8 @@ export function ServiceExplorer() {
           <Reveal delay={0.08}>
             <div className="field-line relative overflow-hidden rounded-[2rem] border border-white/70 bg-linear-to-br from-navy-950 via-navy-900 to-[#0f5d73] p-6 text-white shadow-forcefield">
               <div className="absolute -right-12 top-0 h-36 w-36 rounded-full bg-white/12 blur-3xl" />
-              <div className="logo-surface absolute bottom-4 right-4 rounded-[1.5rem] border p-3">
-                <Image
-                  src={SITE_ASSETS.accentCrest}
-                  alt="ForceField shield accent"
-                  width={184}
-                  height={184}
-                  className="h-auto w-20 opacity-90 sm:w-28"
-                />
+              <div className="absolute bottom-4 right-4 rounded-[1.5rem] border border-white/16 bg-[#07162f] p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                <ForceFieldCrest className="h-auto w-20 opacity-90 sm:w-28" />
               </div>
               <div className="relative max-w-md space-y-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-200">
@@ -170,7 +163,7 @@ export function ServiceExplorer() {
           </Reveal>
         </div>
 
-        <div className="grid gap-5 xl:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
           {SERVICE_TRACKS.map((track, index) => (
             <Reveal key={track.id} delay={index * 0.08}>
               <div
@@ -180,14 +173,8 @@ export function ServiceExplorer() {
                 )}
               >
                 <div className="flex items-center gap-4">
-                  <div className="logo-surface rounded-[1.25rem] border p-3">
-                    <Image
-                      src={track.id === "field" ? SITE_ASSETS.fieldCrest : SITE_ASSETS.digitalCrest}
-                      alt={`${track.entity} crest`}
-                      width={72}
-                      height={72}
-                      className="h-auto w-14"
-                    />
+                  <div className="rounded-[1.25rem] border border-white/16 bg-[#07162f] p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                    <ForceFieldCrest className="h-auto w-14" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-600">{track.label}</p>

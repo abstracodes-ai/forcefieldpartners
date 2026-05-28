@@ -25,6 +25,7 @@ import {
   Workflow,
 } from "lucide-react";
 
+import { ForceFieldCrest } from "@/components/site/forcefield-crest";
 import { LeadCapture } from "@/components/site/lead-capture";
 import { LeadForm } from "@/components/site/lead-form";
 import { Reveal } from "@/components/site/reveal";
@@ -188,11 +189,6 @@ const contactCards = [
   },
 ];
 
-const segmentCrests = {
-  field: SITE_ASSETS.fieldCrest,
-  digital: SITE_ASSETS.digitalCrest,
-};
-
 export default function HomePage() {
   return (
     <>
@@ -200,40 +196,32 @@ export default function HomePage() {
       <LeadCapture />
 
       <main id="home" className="overflow-hidden pb-20">
-        <section className="relative overflow-hidden bg-navy-950 pb-16 pt-28 text-white sm:pt-32">
-          <div className="bg-grid-dark absolute inset-0 opacity-25" />
-          <div className="absolute left-0 top-16 h-72 w-72 rounded-full bg-teal-500/18 blur-3xl" />
-          <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-sky-500/14 blur-3xl" />
+        <section className="relative overflow-hidden pb-16 pt-36 sm:pt-40">
+          <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-teal-500/14 blur-3xl" />
+          <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
 
-          <div className="container relative">
-            <div className="field-line surface-shell overflow-hidden rounded-[2.35rem] border border-white/10 shadow-forcefield">
-              <div className="grid lg:grid-cols-[0.84fr_1.16fr]">
+          <div className="mx-3 sm:mx-4">
+            <div className="field-line surface-shell overflow-hidden rounded-[2.35rem] border border-navy-900/10 shadow-forcefield">
+              <div className="grid grid-cols-1 lg:grid-cols-[46%_54%]">
                 <div className="relative px-6 pb-10 pt-8 sm:px-8 lg:px-10 lg:pb-12 lg:pt-10">
-                  <div className="mb-6 flex flex-wrap items-center gap-3">
-                    <div className="logo-surface rounded-[1.1rem] border p-2.5">
-                      <Image
-                        src={SITE_ASSETS.primaryCrest}
-                        alt="ForceField crest asset"
-                        width={72}
-                        height={72}
-                        className="h-auto w-14"
-                      />
+                  <div className="mb-5 flex flex-wrap items-center gap-3">
+                    <div className="rounded-[1.1rem] border border-white/16 bg-[#07162f] p-2.5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                      <ForceFieldCrest className="h-auto w-12" />
                     </div>
                     <Badge>On ground everywhere. In cloud where it counts.</Badge>
                   </div>
 
-                  <div className="max-w-xl space-y-5">
-                    <h1 className="font-display text-balance text-4xl font-semibold tracking-tight text-navy-950 sm:text-5xl lg:text-[3.7rem] lg:leading-[1.04]">
+                  <div className="max-w-lg space-y-4">
+                    <h1 className="font-display text-balance text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl lg:text-[3.2rem] lg:leading-[1.06]">
                       Execution Teams for the Field, Cloud &amp; AI Era
                     </h1>
-                    <p className="text-balance text-base leading-8 text-navy-800 sm:text-lg">
+                    <p className="text-balance text-sm leading-7 text-navy-800 sm:text-base sm:leading-8">
                       ForceField Partners LLP helps businesses scale execution from field sales deployment to secure
-                      DevOps, production-grade MLOps, and business workflow automation through ForceField Field Partner
-                      and ForceField DevOps &amp; Automation.
+                      DevOps, production-grade MLOps, and business workflow automation.
                     </p>
                   </div>
 
-                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                     <Button asChild size="lg">
                       <Link href="#contact">
                         Book a Discovery Call
@@ -245,7 +233,7 @@ export default function HomePage() {
                     </Button>
                   </div>
 
-                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-6 hidden gap-3 sm:grid sm:grid-cols-2">
                     <div className="rounded-[1.5rem] border border-navy-900/10 bg-white px-4 py-4 shadow-lg shadow-slate-950/5">
                       <div className="mb-3 flex items-center gap-3">
                         <div className="flex size-10 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-700">
@@ -272,33 +260,32 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="relative min-h-[360px] lg:min-h-full">
+                <div className="relative h-[320px] bg-linear-to-br from-slate-100 via-[#d9e9f2] to-[#b9d3e5] sm:h-[400px] lg:h-auto lg:min-h-full">
                   <Image
                     src={SITE_ASSETS.heroScene}
                     alt="ForceField field execution and network operations visual"
                     fill
                     priority
-                    className="object-cover object-[68%_center]"
+                    className="object-cover object-[60%_center] xl:object-[58%_center]"
                   />
-                  <div className="absolute inset-0 bg-linear-to-r from-white via-white/32 to-transparent lg:from-white/10 lg:via-white/0 lg:to-transparent" />
-                  <div className="absolute inset-0 bg-linear-to-t from-navy-950/18 via-transparent to-white/8" />
+                  <div className="absolute inset-0 bg-linear-to-r from-white/55 via-white/10 to-transparent lg:from-white/8 lg:via-transparent lg:to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-navy-950/10 via-transparent to-transparent" />
 
-                  <div className="absolute left-5 top-5 max-w-[15rem] rounded-[1.4rem] border border-white/55 bg-white/88 p-4 text-navy-950 shadow-xl shadow-slate-950/10 backdrop-blur-sm sm:left-6 sm:top-6 sm:max-w-[16rem]">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-600">
+                  <div className="absolute left-4 top-4 hidden max-w-[13rem] rounded-[1.2rem] border border-white/55 bg-white/88 p-3 text-navy-950 shadow-xl shadow-slate-950/10 backdrop-blur-sm sm:block sm:left-5 sm:top-5 sm:max-w-[14rem]">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-600">
                       Pan-India execution visibility
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-navy-800">
+                    <p className="mt-1.5 text-xs leading-5 text-navy-800">
                       Ground-force deployment, route coverage, and operational telemetry under one execution layer.
                     </p>
                   </div>
 
-                  <div className="absolute bottom-5 left-5 max-w-[15rem] rounded-[1.4rem] border border-white/15 bg-navy-950/90 p-4 text-white shadow-xl shadow-slate-950/20 backdrop-blur-sm sm:bottom-6 sm:left-6 sm:max-w-[17rem]">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">
+                  <div className="absolute bottom-4 left-4 hidden max-w-[13rem] rounded-[1.2rem] border border-white/15 bg-navy-950/90 p-3 text-white shadow-xl shadow-slate-950/20 backdrop-blur-sm sm:block sm:bottom-5 sm:left-5 sm:max-w-[15rem]">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-300">
                       Workflow automation in scope
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">
-                      ForceField automates internal approvals, reporting, CRM handoffs, support flows, and AI-assisted
-                      operations where they improve throughput.
+                    <p className="mt-1.5 text-xs leading-5 text-slate-300">
+                      ForceField automates internal approvals, reporting, CRM handoffs, and AI-assisted operations.
                     </p>
                   </div>
                 </div>
@@ -379,14 +366,8 @@ export default function HomePage() {
                           </div>
                         </div>
 
-                        <div className="logo-surface w-fit rounded-[1.5rem] border p-3">
-                          <Image
-                            src={segmentCrests[track.id]}
-                            alt={`${track.entity} shield asset`}
-                            width={132}
-                            height={132}
-                            className="h-auto w-20 sm:w-24"
-                          />
+                        <div className="w-fit rounded-[1.5rem] border border-white/16 bg-[#07162f] p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                          <ForceFieldCrest className="h-auto w-20 sm:w-24" />
                         </div>
                       </div>
 
@@ -442,7 +423,7 @@ export default function HomePage() {
         <ServiceExplorer />
 
         <section id="why-forcefield" className="py-18 sm:py-22 lg:py-24">
-          <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="container grid grid-cols-1 gap-10 lg:grid-cols-[45%_55%] lg:items-start">
             <Reveal>
               <SectionHeading
                 eyebrow="Why ForceField"
@@ -466,7 +447,7 @@ export default function HomePage() {
 
             <Reveal delay={0.08}>
               <div className="field-line overflow-hidden rounded-[2rem] border border-white/12 bg-navy-950 text-white shadow-forcefield">
-                <div className="hidden gap-4 border-b border-white/10 bg-white/4 px-6 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 md:grid md:grid-cols-[0.78fr_1.22fr]">
+                <div className="hidden gap-4 border-b border-white/10 bg-white/4 px-6 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 md:grid md:grid-cols-[39%_61%]">
                   <div>Common friction</div>
                   <div>ForceField response</div>
                 </div>
@@ -474,7 +455,7 @@ export default function HomePage() {
                   {challengeRows.map((row) => (
                     <div
                       key={row.problem}
-                      className="grid gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-5 md:grid-cols-[0.78fr_1.22fr]"
+                      className="grid grid-cols-1 gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-5 md:grid-cols-[39%_61%]"
                     >
                       <div>
                         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 md:hidden">
@@ -538,7 +519,7 @@ export default function HomePage() {
               />
             </Reveal>
 
-            <div className="grid gap-6 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {workSteps.map((step, index) => (
                 <Reveal key={step.title} delay={index * 0.06}>
                   <div className="field-line relative h-full rounded-[1.75rem] border border-white/70 bg-white p-6 shadow-forcefield">
@@ -558,7 +539,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-linear-to-br from-navy-950 via-navy-900 to-[#05101f]" />
           <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-teal-500/16 blur-3xl" />
 
-          <div className="container relative grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div className="container relative grid grid-cols-1 gap-10 lg:grid-cols-[46%_54%] lg:items-center">
             <Reveal>
               <SectionHeading
                 eyebrow="About ForceField"
@@ -580,15 +561,9 @@ export default function HomePage() {
             <Reveal delay={0.08}>
               <div className="grid gap-6">
                 <div className="field-line overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-forcefield sm:p-7">
-                  <div className="grid gap-6 sm:grid-cols-[0.78fr_1.22fr] sm:items-center">
-                    <div className="logo-surface rounded-[1.75rem] border p-5">
-                      <Image
-                        src={SITE_ASSETS.accentCrest}
-                        alt="ForceField accent crest"
-                        width={240}
-                        height={240}
-                        className="mx-auto h-auto w-full max-w-[180px]"
-                      />
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-[39%_61%] sm:items-center">
+                    <div className="rounded-[1.75rem] border border-white/16 bg-[#07162f] p-5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                      <ForceFieldCrest className="mx-auto w-full max-w-[180px]" />
                     </div>
                     <div className="space-y-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">
@@ -635,7 +610,7 @@ export default function HomePage() {
           <div className="container">
             <Reveal>
               <div className="field-line overflow-hidden rounded-[2.25rem] border border-white/75 bg-white shadow-forcefield">
-                <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.92fr_1.08fr] lg:p-10">
+                <div className="grid grid-cols-1 gap-8 p-6 sm:p-8 lg:grid-cols-[46%_54%] lg:p-10">
                   <div className="space-y-6">
                     <Badge>Contact</Badge>
                     <div className="space-y-4">

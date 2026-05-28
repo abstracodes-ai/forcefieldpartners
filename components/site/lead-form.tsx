@@ -223,7 +223,7 @@ export function LeadForm({
           <label className={cn("space-y-2", !isCompact && "sm:col-span-2")}>
             <span className="text-sm font-semibold text-navy-900">Requirement</span>
             <textarea
-              className="input-surface min-h-28 resize-y"
+              className={cn("input-surface resize-y", isCompact ? "min-h-[5.5rem]" : "min-h-28")}
               name="message"
               value={form.message}
               onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}

@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 
 import { BrandLockup } from "@/components/site/brand-lockup";
-import { SITE_ASSETS } from "@/lib/site-assets";
+import { ForceFieldCrest } from "@/components/site/forcefield-crest";
 
 const links = [
   { label: "Field + DevOps", href: "/#divisions" },
@@ -43,14 +42,8 @@ export function SiteFooter() {
 
           <div className="grid gap-4 lg:max-w-md">
             <div className="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-              <div className="logo-surface rounded-[1.2rem] border p-2.5">
-                <Image
-                  src={SITE_ASSETS.primaryCrest}
-                  alt="ForceField crest"
-                  width={72}
-                  height={72}
-                  className="h-auto w-14"
-                />
+              <div className="rounded-[1.2rem] border border-white/16 bg-[#07162f] p-2.5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                <ForceFieldCrest className="h-auto w-14" />
               </div>
               <div className="text-sm leading-6 text-slate-300">
                 Built for India-first operations that need stronger field control and more disciplined digital delivery.

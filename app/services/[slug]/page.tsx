@@ -152,7 +152,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         </section>
 
         <section className="py-18 sm:py-22 lg:py-24">
-          <div className="container grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="container grid grid-cols-1 gap-8 lg:grid-cols-[54%_46%]">
             <Card className="field-line overflow-hidden border-white/70">
               <CardHeader className="space-y-4">
                 <CardTitle className="text-navy-900">What this service covers</CardTitle>
@@ -187,7 +187,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         </section>
 
         <section className="bg-white/70 py-18 sm:py-22 lg:py-24">
-          <div className="container grid gap-8 lg:grid-cols-[0.96fr_1.04fr]">
+          <div className="container grid grid-cols-1 gap-8 lg:grid-cols-[48%_52%]">
             <div className="space-y-5">
               <div className="rounded-full border border-teal-500/16 bg-teal-500/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-500 inline-flex">
                 Where it fits
@@ -254,7 +254,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             ) : null}
 
             <div className="field-line glass-panel rounded-[2rem] border border-white/70 p-7 shadow-forcefield">
-              <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-[52%_48%] lg:items-center">
                 <div className="space-y-4">
                   <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
                     Need this mapped to your operating environment?

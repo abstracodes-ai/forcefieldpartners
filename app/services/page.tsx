@@ -119,7 +119,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="field-line glass-panel rounded-[2rem] border border-white/70 p-7 shadow-forcefield">
-              <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-[52%_48%] lg:items-center">
                 <div className="space-y-4">
                   <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
                     Need both ForceField operating lines on one mandate?

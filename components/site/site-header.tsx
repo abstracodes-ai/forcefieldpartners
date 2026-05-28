@@ -23,10 +23,10 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="container py-4">
+      <div className="mx-3 py-4 sm:mx-4">
         <div className="field-line flex items-center justify-between rounded-[2rem] border border-white/80 bg-white/92 px-4 py-3.5 shadow-forcefield backdrop-blur-xl sm:px-6 sm:py-4">
           <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
-            <BrandLockup mode="light" size="md" className="sm:pr-4" />
+            <BrandLockup mode="light" size="lg" className="sm:pr-4" />
           </Link>
 
           <nav className="hidden items-center gap-5 text-sm text-navy-900 xl:gap-6 lg:flex">

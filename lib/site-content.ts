@@ -1,9 +1,9 @@
 export const PRIMARY_DOMAIN = "https://www.forcefieldpartners.in";
 
 export const BRAND_NAME = "ForceField Partners LLP";
-export const SITE_TITLE = `${BRAND_NAME} | Field Force, DevOps, MLOps & Workflow Automation India`;
+export const SITE_TITLE = `${BRAND_NAME} | Field Force, DevOps & Automation India`;
 export const SITE_DESCRIPTION =
-  "ForceField Partners LLP is a Kolkata-based business services company delivering field force outsourcing, retailer and distributor activation, DevOps, MLOps, and business workflow automation across India.";
+  "ForceField Partners LLP delivers field force outsourcing, distributor & retailer activation, DevOps, MLOps, and business workflow automation across India.";
 
 export const SITE_KEYWORDS = [
   "ForceField Partners LLP",
