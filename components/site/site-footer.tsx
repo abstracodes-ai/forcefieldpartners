@@ -63,8 +63,8 @@ export function SiteFooter() {
         <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between">
           <p>© {new Date().getFullYear()} ForceField Partners LLP. All rights reserved.</p>
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 lg:justify-end">
-            <a href="mailto:sandeepmailbox.83@gmail.com" className="hover:text-white">
-              sandeepmailbox.83@gmail.com
+            <a href="mailto:sales@forcefieldpartners.in" className="hover:text-white">
+              sales@forcefieldpartners.in
             </a>
             <a href="tel:+919474905990" className="hover:text-white">
               +91 9474905990

@@ -31,7 +31,7 @@ export const SITE_KEYWORDS = [
 ];
 
 export const COMPANY = {
-  email: "sandeepmailbox.83@gmail.com",
+  email: "sales@forcefieldpartners.in",
   phone: "+91-9474905990",
   office: "Sector V, Salt Lake City, Kolkata 700091",
   linkedin: "https://www.linkedin.com/company/forcefieldpartners",
