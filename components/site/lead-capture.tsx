@@ -177,11 +177,10 @@ export function LeadCapture() {
                 </div>
                 <div className="space-y-3">
                   <h3 className="font-display text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
-                    Tell ForceField what needs to move
+                    Tell ForceField what you want to build
                   </h3>
                   <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                    Share a few details and the right team will follow up on field execution, DevOps, MLOps, or
-                    workflow automation.
+                    Share a few details and the right specialist will follow up — AI, DevOps, MLOps, design, or development.
                   </p>
                 </div>
 
@@ -205,10 +204,10 @@ export function LeadCapture() {
                 <div className="space-y-2">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">Discovery request</p>
                   <h4 className="font-display text-lg font-semibold tracking-tight">
-                    Need field execution, DevOps, or workflow automation support?
+                    Need AI, DevOps, design, or development help?
                   </h4>
                   <p className="text-sm leading-6 text-slate-300">
-                    Share the requirement and the right ForceField team will follow up.
+                    Share the requirement and the right ForceField specialist will follow up.
                   </p>
                 </div>
                 <button

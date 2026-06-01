@@ -28,10 +28,13 @@ type LeadPayload = {
 type FormStatus = "idle" | "submitting" | "success" | "manual" | "error";
 
 const segmentOptions = [
-  "ForceField Field Partner",
-  "ForceField DevOps & Automation",
-  "Both service lines",
-  "Business Workflow Automation",
+  "AI Workflow Automation",
+  "MLOps Services",
+  "DevOps & DevSecOps",
+  "Logo & Brand Design",
+  "Creative Design (Flyer / Flex / Video / Gig)",
+  "Web Development",
+  "Multiple services",
 ];
 
 function buildLeadSummary(form: LeadPayload) {
@@ -70,7 +73,7 @@ export function LeadForm({
   const isCompact = variant === "compact";
   const contactSummary = useMemo(() => buildLeadSummary(form), [form]);
   const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent(`ForceField discovery request from ${form.company || form.name || "business inquiry"}`);
+    const subject = encodeURIComponent(`ForceField Technologies — project enquiry from ${form.company || form.name || "new client"}`);
     const body = encodeURIComponent(contactSummary);
 
     return `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
@@ -87,7 +90,7 @@ export function LeadForm({
 
     if (!form.name.trim() || !form.company.trim()) {
       setStatus("error");
-      setFeedback("Add your name and company so ForceField can respond with the right operating context.");
+      setFeedback("Add your name and company so ForceField can respond with the right context.");
       return;
     }
 
@@ -99,7 +102,8 @@ export function LeadForm({
 
     if (!form.segment.trim()) {
       setStatus("error");
-      setFeedback("Select the service line or execution area you want to discuss.");
+      setFeedback("Select the service you want to discuss.");
+
       return;
     }
 
@@ -204,14 +208,14 @@ export function LeadForm({
           </label>
 
           <label className={cn("space-y-2", !isCompact && "sm:col-span-2")}>
-            <span className="text-sm font-semibold text-navy-900">Operating Line</span>
+            <span className="text-sm font-semibold text-navy-900">Service Needed</span>
             <select
               className="input-surface"
               name="segment"
               value={form.segment}
               onChange={(event) => setForm((current) => ({ ...current, segment: event.target.value }))}
             >
-              <option value="">Select Field Partner, DevOps & Automation, or workflow automation</option>
+              <option value="">Select AI, DevOps, MLOps, Design, or Development</option>
               {segmentOptions.map((option) => (
                 <option key={option} value={option}>
                   {option}
@@ -227,14 +231,14 @@ export function LeadForm({
               name="message"
               value={form.message}
               onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
-              placeholder="Briefly describe the geography, team, systems, or workflow that needs execution support."
+              placeholder="Briefly describe the project, workflow, or requirement you want ForceField to help with."
             />
           </label>
         </div>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm leading-6 text-muted-foreground">
-            ForceField will route this to the field, DevOps, MLOps, or automation team that matches the requirement.
+            ForceField will route this to the right specialist — AI, DevOps, MLOps, design, or development.
           </p>
           <Button type="submit" size={isCompact ? "default" : "lg"} disabled={status === "submitting"}>
             {status === "submitting" ? (
