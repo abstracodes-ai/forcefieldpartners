@@ -1,33 +1,31 @@
 export const PRIMARY_DOMAIN = "https://www.forcefieldpartners.in";
 
-export const BRAND_NAME = "ForceField Partners LLP";
-export const SITE_TITLE = `${BRAND_NAME} | Field Force, DevOps & Automation India`;
+export const BRAND_NAME = "ForceField Technologies Pvt Ltd";
+export const SITE_TITLE = `ForceField Technologies | AI, DevOps, Design & Development`;
 export const SITE_DESCRIPTION =
-  "ForceField Partners LLP delivers field force outsourcing, distributor & retailer activation, DevOps, MLOps, and business workflow automation across India.";
+  "ForceField Technologies delivers AI automation, MLOps, DevOps, brand & logo design, creative graphics, and web development for businesses worldwide.";
 
 export const SITE_KEYWORDS = [
-  "ForceField Partners LLP",
-  "ForceField Partners",
-  "ForceField",
-  "Force Field Partners",
-  "field force outsourcing",
-  "field force management",
-  "field execution partner India",
-  "field operations partner India",
-  "distributor activation",
-  "retailer activation",
-  "sales training KRA setup",
-  "DevOps services India",
-  "DevSecOps services",
+  "ForceField Technologies",
+  "AI automation services",
   "MLOps services",
+  "DevOps services",
+  "DevSecOps",
   "AI workflow automation",
-  "business workflow automation",
-  "workflow automation company India",
-  "business workflow automation India",
-  "business workflow automation company India",
-  "Kolkata DevOps services",
-  "Kolkata workflow automation company",
-  "Kolkata business services",
+  "logo design services",
+  "brand identity design",
+  "flyer design",
+  "flex banner design",
+  "social media design",
+  "video graphics",
+  "gig artwork design",
+  "web development",
+  "custom software development",
+  "AI development company",
+  "DevOps company",
+  "design agency",
+  "technology company",
+  "remote technology services",
 ];
 
 export const COMPANY = {
@@ -37,14 +35,14 @@ export const COMPANY = {
   linkedin: "https://www.linkedin.com/company/forcefieldpartners",
 };
 
-export type TrackId = "field" | "digital";
+export type TrackId = "tech" | "creative";
 export type ServiceIconKey =
-  | "users"
-  | "store"
-  | "graduationCap"
   | "cloudCog"
   | "brainCircuit"
-  | "workflow";
+  | "workflow"
+  | "palette"
+  | "penTool"
+  | "code";
 
 export type ServiceDefinition = {
   slug: string;
@@ -66,201 +64,197 @@ export type ServiceDefinition = {
 
 export const SERVICE_TRACKS = [
   {
-    id: "field" as const,
-    label: "Field Execution Partner",
-    entity: "ForceField Field Partner",
-    summary: "Ground-force deployment, retail activation, and performance-managed field execution.",
+    id: "tech" as const,
+    label: "AI, DevOps & Automation",
+    entity: "ForceField Technology",
+    summary: "AI automation, MLOps, and DevOps for teams that need faster delivery, smarter systems, and reliable cloud operations.",
     description:
-      "Built for brands that need feet-on-ground discipline, channel activation, territory rollout, and last-mile accountability across distributed markets.",
+      "Built for engineering teams, product companies, and businesses that need AI-powered workflows, production-grade ML operations, and secure cloud delivery pipelines.",
     bullets: [
-      "Territory coverage and rollout discipline",
-      "Retail and distributor movement with reporting rigor",
-      "Sales team training, KRAs, and field performance visibility",
+      "AI workflow automation and agentic AI systems",
+      "MLOps — model deployment, monitoring, and lifecycle control",
+      "DevOps & DevSecOps — CI/CD, infrastructure automation, release governance",
     ],
-    capabilities: [
-      "Field Force Outsourcing",
-      "Distributor & Retailer Activation",
-      "Sales Training & KRA Setup",
-    ],
+    capabilities: ["AI Automation", "MLOps", "DevOps & DevSecOps"],
   },
   {
-    id: "digital" as const,
-    label: "DevOps & Automation Partner",
-    entity: "ForceField DevOps & Automation",
-    summary: "DevOps, MLOps, and business workflow automation for secure scale.",
+    id: "creative" as const,
+    label: "Design & Development",
+    entity: "ForceField Creative & Build",
+    summary: "Brand design, creative graphics, and web development for businesses that need to look sharp and build fast.",
     description:
-      "Built for businesses that need faster software delivery, safer releases, production ML reliability, and automation across practical business workflows.",
+      "Built for startups, agencies, and businesses that need strong brand identity, creative production (logo, flyer, flex, video, gig artwork), and custom web or product development.",
     bullets: [
-      "Secure cloud delivery and release governance",
-      "MLOps for deployment, monitoring, and lifecycle continuity",
-      "Business workflow automation across sales ops, HR, finance, support, and reporting",
+      "Logo, brand identity, and visual design systems",
+      "Creative production — flyers, flex banners, social media, video, gig artwork",
+      "Web and product development",
     ],
-    capabilities: ["DevOps Services", "MLOps Services", "Business Workflow Automation"],
+    capabilities: ["Logo & Brand Design", "Creative Graphics", "Web Development"],
   },
 ];
 
 export const SERVICES: ServiceDefinition[] = [
   {
-    slug: "field-force-outsourcing",
-    title: "Field Force Outsourcing",
-    tag: "Ground execution",
-    track: "field",
-    trackLabel: "Field Partner",
-    entityName: "ForceField Field Partner",
-    iconKey: "users",
-    summary: "Dedicated field execution teams for territory coverage, market reach, and accountable last-mile performance.",
+    slug: "ai-automation",
+    title: "AI Workflow Automation",
+    tag: "Intelligent automation",
+    track: "tech",
+    trackLabel: "AI & Automation",
+    entityName: "ForceField Technology",
+    iconKey: "brainCircuit",
+    summary: "AI agents and automation systems that eliminate manual workflows, approval bottlenecks, and coordination overhead across any business function.",
     description:
-      "Dedicated field execution teams built for territory coverage, market reach, reporting discipline, and measurable last-mile accountability.",
+      "Agentic AI systems built around your business processes — automating approvals, document review, CRM handoffs, support workflows, finance ops, HR operations, and reporting across teams.",
     seoDescription:
-      "ForceField Partners LLP provides field force outsourcing for territory coverage, channel execution, reporting discipline, and last-mile accountability.",
-    heroEyebrow: "Field Execution Service",
+      "ForceField Technologies builds AI workflow automation for approvals, document review, CRM handoffs, support, finance, HR, and reporting — reducing manual work and improving throughput.",
+    heroEyebrow: "AI Automation Service",
     deliverables: [
-      "Territory planning, rollout, and manpower deployment",
-      "Daily activity reporting and field supervision cadence",
-      "Performance tracking aligned to KRAs and sales outcomes",
+      "Business process mapping and automation opportunity identification",
+      "AI agent design for document review, routing, and decision workflows",
+      "Human-in-the-loop approval flows with full audit trail",
     ],
     useCases: [
-      "New market entry and expansion",
-      "Distributor-led route coverage",
-      "Retail push campaigns and visibility drives",
+      "Invoice validation and payment processing automation",
+      "Lead routing and CRM update workflows",
+      "HR document review and onboarding automation",
     ],
-    sectors: ["FMCG", "Consumer Brands", "Industrial Distribution", "Healthcare Field Teams"],
-    keywords: ["field force outsourcing", "field sales outsourcing", "sales force deployment"],
-  },
-  {
-    slug: "distributor-retailer-activation",
-    title: "Distributor & Retailer Activation",
-    tag: "Channel growth",
-    track: "field",
-    trackLabel: "Field Partner",
-    entityName: "ForceField Field Partner",
-    iconKey: "store",
-    summary: "Channel activation programs that improve distributor movement, retailer engagement, and in-market execution quality.",
-    description:
-      "Channel activation programs that improve distributor movement, retailer engagement, visibility, and sales momentum across target markets.",
-    seoDescription:
-      "ForceField Partners LLP helps brands improve distributor and retailer activation through disciplined field execution, reporting, and channel visibility.",
-    heroEyebrow: "Channel Activation Service",
-    deliverables: [
-      "Distributor onboarding and movement activation support",
-      "Retail engagement, visibility, and outlet-level execution",
-      "Market feedback loops and activation reporting",
-    ],
-    useCases: [
-      "Dealer onboarding and route activation",
-      "Retail visibility campaigns",
-      "Secondary sales movement acceleration",
-    ],
-    sectors: ["FMCG", "Retail Distribution", "Consumer Goods", "Channel-led Businesses"],
-    keywords: ["distributor activation", "retailer activation", "channel activation services"],
-  },
-  {
-    slug: "sales-training-kra-setup",
-    title: "Sales Training & KRA Setup",
-    tag: "Performance systems",
-    track: "field",
-    trackLabel: "Field Partner",
-    entityName: "ForceField Field Partner",
-    iconKey: "graduationCap",
-    summary: "Sales enablement systems with onboarding, KRAs, and performance management for field teams.",
-    description:
-      "Structured onboarding, role clarity, performance KRAs, and feedback loops that turn field teams into reliable execution engines.",
-    seoDescription:
-      "ForceField Partners LLP builds sales training and KRA systems for field teams that need role clarity, onboarding rigor, and measurable execution discipline.",
-    heroEyebrow: "Performance Enablement Service",
-    deliverables: [
-      "Role-based onboarding and sales process enablement",
-      "KRA and KPI design for field and channel teams",
-      "Ongoing coaching loops and reporting discipline",
-    ],
-    useCases: [
-      "Scaling a new sales team",
-      "Improving low-visibility field operations",
-      "Standardizing distributor and sales rep execution",
-    ],
-    sectors: ["Consumer Sales", "Industrial Sales", "B2B Distribution", "Pharma Field Teams"],
-    keywords: ["sales training", "KRA setup", "field team performance management"],
-  },
-  {
-    slug: "devsecops-services",
-    title: "DevOps Services",
-    tag: "Secure cloud delivery",
-    track: "digital",
-    trackLabel: "DevOps & Automation",
-    entityName: "ForceField DevOps & Automation",
-    iconKey: "cloudCog",
-    summary: "Secure cloud delivery pipelines, infrastructure automation, and release governance for modern engineering teams.",
-    description:
-      "Secure delivery pipelines, policy controls, infrastructure automation, and release governance that reduce friction without compromising trust.",
-    seoDescription:
-      "ForceField Partners LLP delivers DevOps services and secure delivery automation for infrastructure consistency, release guardrails, and cloud delivery confidence.",
-    heroEyebrow: "Digital Delivery Service",
-    deliverables: [
-      "CI/CD pipeline design with embedded security controls",
-      "Infrastructure automation and environment standardization",
-      "Release governance, policy enforcement, and observability setup",
-    ],
-    useCases: [
-      "Cloud platform modernization",
-      "Secure release automation",
-      "Reducing environment drift and deployment friction",
-    ],
-    sectors: ["Technology", "SaaS", "Fintech", "Regulated Digital Products"],
-    keywords: ["DevOps services", "DevSecOps services", "secure CI/CD", "cloud infrastructure automation"],
+    sectors: ["Finance & Fintech", "SaaS & Technology", "Healthcare", "E-commerce", "Legal"],
+    keywords: ["AI workflow automation", "business process automation", "agentic AI", "AI automation services"],
   },
   {
     slug: "mlops-services",
     title: "MLOps Services",
     tag: "Model operations",
-    track: "digital",
-    trackLabel: "DevOps & Automation",
-    entityName: "ForceField DevOps & Automation",
+    track: "tech",
+    trackLabel: "AI & Automation",
+    entityName: "ForceField Technology",
     iconKey: "brainCircuit",
-    summary: "Production-grade deployment, monitoring, and lifecycle management for machine learning systems.",
+    summary: "Production-grade ML deployment, monitoring, and lifecycle management for teams that need models in production — not stuck in notebooks.",
     description:
-      "Production-grade model packaging, deployment, monitoring, and lifecycle management so ML moves from pilots to dependable operations.",
+      "Model packaging, deployment, serving pipelines, drift monitoring, retraining readiness, and lifecycle control so ML moves from experimentation to dependable production operations.",
     seoDescription:
-      "ForceField Partners LLP provides MLOps services for model deployment, monitoring, lifecycle control, and production ML reliability.",
+      "ForceField Technologies provides MLOps services for model deployment, monitoring, drift detection, and production ML lifecycle management.",
     heroEyebrow: "Machine Learning Operations",
     deliverables: [
-      "Model packaging, release, and serving workflows",
-      "Monitoring, drift visibility, and retraining readiness",
+      "Model packaging, release pipeline, and serving infrastructure",
+      "Monitoring, drift detection, and retraining readiness setup",
       "Operational handoff from experimentation to production",
     ],
     useCases: [
-      "Taking ML pilots into production",
-      "Stabilizing existing model-serving systems",
-      "Creating a repeatable ML release lifecycle",
+      "Taking ML pilots into reliable production systems",
+      "Stabilising existing model-serving infrastructure",
+      "Building repeatable ML release and monitoring lifecycle",
     ],
-    sectors: ["SaaS", "AI Products", "Analytics Platforms", "Data-driven Enterprises"],
-    keywords: ["MLOps services", "model deployment", "production machine learning"],
+    sectors: ["SaaS", "AI Products", "Analytics Platforms", "HealthTech", "Fintech"],
+    keywords: ["MLOps services", "model deployment", "production machine learning", "ML operations"],
   },
   {
-    slug: "business-workflow-automation",
-    title: "Business Workflow Automation",
-    tag: "Business automation",
-    track: "digital",
-    trackLabel: "DevOps & Automation",
-    entityName: "ForceField DevOps & Automation",
-    iconKey: "workflow",
-    summary: "Automation for approvals, reporting, CRM handoffs, support workflows, HR operations, finance ops, and AI-assisted business processes.",
+    slug: "devops-services",
+    title: "DevOps & DevSecOps",
+    tag: "Cloud delivery",
+    track: "tech",
+    trackLabel: "DevOps & Cloud",
+    entityName: "ForceField Technology",
+    iconKey: "cloudCog",
+    summary: "Secure CI/CD pipelines, infrastructure automation, and release governance for engineering teams that need to ship faster without breaking things.",
     description:
-      "Automation for approvals, reporting, CRM handoffs, support workflows, HR operations, finance operations, and AI-assisted business processes.",
+      "Secure delivery pipelines, policy controls, infrastructure automation, and release governance that reduce deployment friction while maintaining trust and compliance.",
     seoDescription:
-      "ForceField Partners LLP builds business workflow automation for sales ops, finance ops, HR, reporting, support, and AI-assisted internal processes.",
-    heroEyebrow: "Business Operations Automation",
+      "ForceField Technologies delivers DevOps and DevSecOps services — CI/CD pipelines, infrastructure automation, release governance, and cloud delivery confidence.",
+    heroEyebrow: "Cloud Delivery Service",
     deliverables: [
-      "Workflow mapping across teams, systems, and approval chains",
-      "Tool orchestration and rule-based process automation",
-      "AI-assisted automation where it improves cycle time and accuracy",
+      "CI/CD pipeline design with embedded security controls",
+      "Infrastructure automation and environment standardisation",
+      "Release governance, policy enforcement, and observability setup",
     ],
     useCases: [
-      "Lead routing and CRM updates",
-      "Internal approvals and reporting workflows",
-      "Support, HR, and finance process automation",
+      "Cloud platform modernisation and migration",
+      "Secure release automation for regulated products",
+      "Reducing environment drift and deployment friction",
     ],
-    sectors: ["SaaS", "Services Businesses", "Operations-heavy Teams", "Enterprise Functions"],
-    keywords: ["business workflow automation", "process automation", "AI workflow automation", "operations automation India"],
+    sectors: ["Technology & SaaS", "Fintech", "Healthcare Tech", "E-commerce", "Agencies"],
+    keywords: ["DevOps services", "DevSecOps", "CI/CD pipeline", "cloud infrastructure automation"],
+  },
+  {
+    slug: "logo-brand-design",
+    title: "Logo & Brand Design",
+    tag: "Brand identity",
+    track: "creative",
+    trackLabel: "Design",
+    entityName: "ForceField Creative & Build",
+    iconKey: "penTool",
+    summary: "Logo design, brand identity systems, and visual guidelines that make businesses look credible, consistent, and memorable.",
+    description:
+      "From initial logo concept to full brand identity — including colour systems, typography, usage guidelines, and brand assets built for both print and digital use.",
+    seoDescription:
+      "ForceField Technologies provides logo design and brand identity services — professional logos, colour systems, typography, and visual brand guidelines for businesses worldwide.",
+    heroEyebrow: "Brand Identity Service",
+    deliverables: [
+      "Logo concept exploration, refinement, and final delivery",
+      "Brand colour palette, typography system, and usage guidelines",
+      "Brand asset pack for digital, print, and social use",
+    ],
+    useCases: [
+      "New business launch requiring full brand identity",
+      "Rebrand for growing company or pivot",
+      "Startup needing investor-ready brand materials",
+    ],
+    sectors: ["Startups", "SMBs", "E-commerce", "Agencies", "Creators & Freelancers"],
+    keywords: ["logo design", "brand identity design", "professional logo design", "brand design services"],
+  },
+  {
+    slug: "creative-design",
+    title: "Creative Design",
+    tag: "Visual production",
+    track: "creative",
+    trackLabel: "Design",
+    entityName: "ForceField Creative & Build",
+    iconKey: "palette",
+    summary: "Flyers, flex banners, social media creatives, video graphics, and gig artwork — designed fast and built to perform.",
+    description:
+      "High-quality creative production for marketing, advertising, and content needs — flyers, flex banners, social media posts, YouTube thumbnails, gig platform artwork, and motion graphics.",
+    seoDescription:
+      "ForceField Technologies designs flyers, flex banners, social media creatives, video graphics, YouTube thumbnails, and gig artwork for businesses and creators worldwide.",
+    heroEyebrow: "Creative Production Service",
+    deliverables: [
+      "Print-ready flyers, posters, and flex banner designs",
+      "Social media post templates and content creatives",
+      "Video thumbnails, gig artwork, and motion graphics assets",
+    ],
+    useCases: [
+      "Marketing campaign visual assets",
+      "Event promotion and outdoor advertising materials",
+      "Freelancer or creator platform profile and gig artwork",
+    ],
+    sectors: ["Marketing & Agencies", "E-commerce", "Events", "Creators", "Retail & F&B"],
+    keywords: ["flyer design", "flex banner design", "social media design", "gig artwork", "video graphics design"],
+  },
+  {
+    slug: "web-development",
+    title: "Web Development",
+    tag: "Digital build",
+    track: "creative",
+    trackLabel: "Development",
+    entityName: "ForceField Creative & Build",
+    iconKey: "code",
+    summary: "Fast, modern websites and web applications built for performance, SEO, and real business outcomes.",
+    description:
+      "Custom web development using modern frameworks — landing pages, business websites, web apps, and product interfaces built to load fast, rank well, and convert visitors.",
+    seoDescription:
+      "ForceField Technologies builds fast, modern websites and web applications — landing pages, business sites, and web apps using React, Next.js, and modern stacks.",
+    heroEyebrow: "Web Development Service",
+    deliverables: [
+      "Business website or landing page design and development",
+      "Web application development with modern frontend frameworks",
+      "SEO optimisation, performance tuning, and deployment",
+    ],
+    useCases: [
+      "Startup launching a product or company website",
+      "Business needing a redesigned or modernised web presence",
+      "Agency or creator needing a custom portfolio or tools",
+    ],
+    sectors: ["Startups", "SaaS & Technology", "Agencies", "E-commerce", "Professional Services"],
+    keywords: ["web development", "website design and development", "Next.js development", "custom web development"],
   },
 ];
 

@@ -34,12 +34,8 @@ const rootSchemas = [
       postalCode: "700091",
       addressCountry: "IN",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 22.5773,
-      longitude: 88.4322,
-    },
-    areaServed: { "@type": "Country", name: "India" },
+    geo: { "@type": "GeoCoordinates", latitude: 22.5773, longitude: 88.4322 },
+    areaServed: "Worldwide",
     sameAs: [COMPANY.linkedin],
   },
   {
@@ -48,42 +44,42 @@ const rootSchemas = [
     mainEntity: [
       {
         "@type": "Question",
-        name: "What services does ForceField Partners LLP offer?",
+        name: "What services does ForceField Technologies offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ForceField Partners LLP offers two service lines: ForceField Field Partner (field force outsourcing, distributor and retailer activation, sales training and KRA setup) and ForceField DevOps & Automation (DevOps, MLOps, and business workflow automation).",
+          text: "ForceField Technologies delivers AI workflow automation, MLOps, DevOps & DevSecOps, logo and brand design, creative graphics (flyers, flex, social media, video, gig artwork), and web development for businesses worldwide.",
         },
       },
       {
         "@type": "Question",
-        name: "Where is ForceField Partners LLP located?",
+        name: "Does ForceField Technologies work with international clients?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ForceField Partners LLP is headquartered at Sector V, Salt Lake City, Kolkata 700091, West Bengal, India, and supports pan-India operations.",
+          text: "Yes. ForceField Technologies is a remote-first company delivering AI, DevOps, design, and development services to clients in India, UK, US, Middle East, Australia, and worldwide.",
         },
       },
       {
         "@type": "Question",
-        name: "Does ForceField Partners LLP work pan-India?",
+        name: "What is ForceField's AI automation service?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. ForceField Partners LLP supports field force deployment, distributor activation, and operational delivery across distributed markets throughout India.",
+          text: "ForceField builds agentic AI systems and workflow automation for approvals, document review, CRM handoffs, support queues, finance ops, HR, and reporting — eliminating manual work with human-in-the-loop governance.",
         },
       },
       {
         "@type": "Question",
-        name: "What is ForceField Field Partner?",
+        name: "What design services does ForceField Technologies provide?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ForceField Field Partner provides territory coverage, retailer and distributor activation, sales training, and KRA-led performance management for brands that need ground-force execution across Indian markets.",
+          text: "ForceField provides logo and brand identity design, flyer design, flex banner design, social media creatives, video graphics, YouTube thumbnails, and gig artwork for businesses and creators globally.",
         },
       },
       {
         "@type": "Question",
-        name: "What is ForceField DevOps & Automation?",
+        name: "What is ForceField's DevOps service?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ForceField DevOps & Automation delivers DevOps services, MLOps for production-grade machine learning operations, and workflow automation across business functions including sales, finance, HR, reporting, and support.",
+          text: "ForceField delivers DevOps and DevSecOps services — CI/CD pipelines, infrastructure automation, release governance, and cloud delivery confidence for engineering teams that need to ship faster without breaking things.",
         },
       },
     ],
@@ -94,7 +90,7 @@ const rootSchemas = [
     "@id": `${PRIMARY_DOMAIN}/#organization`,
     name: BRAND_NAME,
     legalName: BRAND_NAME,
-    alternateName: ["ForceField", "ForceField Partners", "Force Field Partners"],
+    alternateName: ["ForceField Technologies", "ForceField", "ForceField Tech"],
     description: SITE_DESCRIPTION,
     email: COMPANY.email,
     telephone: COMPANY.phone,
@@ -106,16 +102,16 @@ const rootSchemas = [
     },
     sameAs: [COMPANY.linkedin],
     knowsAbout: [
-      "Field force outsourcing",
-      "Field force management",
-      "Distributor activation",
-      "Retailer activation",
-      "Sales training and KRA setup",
+      "AI workflow automation",
+      "Agentic AI systems",
+      "MLOps services",
       "DevOps services",
       "DevSecOps services",
-      "MLOps services",
-      "Business workflow automation",
-      "AI workflow automation",
+      "Logo and brand design",
+      "Creative design services",
+      "Web development",
+      "Business process automation",
+      "Cloud infrastructure automation",
     ],
     contactPoint: [
       {
@@ -153,7 +149,7 @@ const rootSchemas = [
     keywords: SITE_KEYWORDS.join(", "),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "ForceField Partners LLP services",
+      name: "ForceField Technologies Pvt Ltd services",
       itemListElement: SERVICES.map((service) => ({
         "@type": "Offer",
         itemOffered: {

@@ -3,26 +3,23 @@ import Link from "next/link";
 import {
   ArrowRight,
   BarChart3,
+  BrainCircuit,
   BriefcaseBusiness,
-  Building2,
   CheckCircle2,
   CloudCog,
-  Factory,
+  Code,
+  Globe,
   Landmark,
   Mail,
   MapPin,
+  Palette,
   PhoneCall,
-  Pill,
-  Radar,
-  Route,
   ShieldCheck,
   Sparkles,
-  Store,
   Target,
-  Truck,
-  Users,
   Waypoints,
   Workflow,
+  Zap,
 } from "lucide-react";
 
 import { ForceFieldCrest } from "@/components/site/forcefield-crest";
@@ -40,138 +37,138 @@ import { COMPANY, SERVICE_TRACKS } from "@/lib/site-content";
 
 const heroMetrics = [
   {
-    title: "Smarter Coverage",
-    description: "Right people in the right territories with measurable field accountability.",
-    icon: Route,
+    title: "AI & Automation",
+    description: "Agentic AI systems that eliminate manual workflows, document review, and approval bottlenecks.",
+    icon: BrainCircuit,
   },
   {
-    title: "Route Intelligence",
-    description: "Operational planning backed by reporting, cadence, and market feedback loops.",
-    icon: Radar,
+    title: "DevOps & MLOps",
+    description: "Secure delivery pipelines, production ML operations, and cloud infrastructure discipline.",
+    icon: CloudCog,
   },
   {
-    title: "Real-time Visibility",
-    description: "Clearer operational views across teams on ground, in cloud, and inside workflows.",
-    icon: BarChart3,
+    title: "Design & Creative",
+    description: "Logo, brand identity, flyers, flex, video graphics, and gig artwork — built to perform.",
+    icon: Palette,
   },
   {
-    title: "Stronger Outcomes",
-    description: "Better execution quality, faster releases, and tighter business process throughput.",
-    icon: Target,
+    title: "Web Development",
+    description: "Fast, modern websites and web apps built for SEO, performance, and real outcomes.",
+    icon: Code,
   },
 ];
 
 const readinessCards = [
   {
-    title: "Pan India Operations",
-    description: "Deep local execution support for distributed field programs.",
-    icon: MapPin,
+    title: "Global Delivery",
+    description: "Remote-first team delivering technology, AI, and design to clients worldwide.",
+    icon: Globe,
   },
   {
-    title: "Retail & CPG Specialized",
-    description: "Ground-force programs shaped for channel, route, and retailer reality.",
-    icon: Store,
+    title: "AI-First Thinking",
+    description: "Every workflow, system, and process evaluated through an automation-first lens.",
+    icon: BrainCircuit,
   },
   {
-    title: "Data-led Execution",
-    description: "Operational reporting and delivery visibility that drive action, not noise.",
-    icon: BarChart3,
+    title: "Speed & Quality",
+    description: "Fast turnaround without cutting corners — delivery discipline built into every engagement.",
+    icon: Zap,
   },
   {
-    title: "Enterprise Grade Security",
-    description: "Secure delivery practices for DevOps, MLOps, and workflow automation.",
+    title: "Secure by Default",
+    description: "DevOps and AI delivery with security, audit, and compliance at the core.",
     icon: ShieldCheck,
   },
 ];
 
 const challengeRows = [
   {
-    problem: "Field teams scale unevenly, channel coverage becomes inconsistent, and accountability weakens.",
-    solution: "ForceField Field Partner provides deployment structure, reporting discipline, and KRA-backed execution control.",
+    problem: "Engineering teams slow down because CI/CD, infrastructure, and releases are fragmented and manual.",
+    solution: "ForceField sets up secure delivery pipelines, infrastructure automation, and release governance that reduces friction.",
   },
   {
-    problem: "Engineering delivery slows down because security, infrastructure, and release management are fragmented.",
-    solution: "ForceField DevOps & Automation sets up secure release workflows, infrastructure discipline, and release guardrails.",
+    problem: "ML projects stay in proof-of-concept and never reach dependable production operations.",
+    solution: "ForceField builds MLOps infrastructure — model serving, monitoring, drift detection, and lifecycle control.",
   },
   {
-    problem: "ML initiatives reach prototype stage but fail to become dependable production systems.",
-    solution: "ForceField builds the operational layer for model deployment, observability, and lifecycle continuity.",
+    problem: "Business teams lose hours to approvals, handoffs, and repetitive tasks across disconnected tools.",
+    solution: "ForceField deploys AI automation agents that handle routing, review, reporting, and coordination workflows.",
   },
   {
-    problem: "Business teams lose time in approvals, reporting, handoffs, and manual follow-up across tools.",
-    solution: "ForceField automates any practical business workflow where cycle time and coordination are dragging performance.",
+    problem: "Businesses lack visual identity or creative assets that look professional and convert attention.",
+    solution: "ForceField designs logos, brand systems, marketing materials, and web experiences built to grow businesses.",
   },
 ];
 
 const sectors = [
   {
-    title: "FMCG & Consumer Brands",
-    description: "Field deployment, route execution, channel activation, and visibility-led performance programs.",
-    icon: Building2,
-  },
-  {
-    title: "Industrial & Manufacturing",
-    description: "Partner networks, sales coverage models, and secure operations support for distributed markets.",
-    icon: Factory,
-  },
-  {
     title: "Technology & SaaS",
-    description: "DevOps, MLOps, automation, and operating support for cloud-native product delivery.",
-    icon: BriefcaseBusiness,
+    description: "DevOps, MLOps, AI automation, and web development for product teams and cloud-native businesses.",
+    icon: CloudCog,
   },
   {
-    title: "Healthcare & Pharma",
-    description: "Execution models that balance field coordination, compliance, and structured reporting.",
-    icon: Pill,
-  },
-  {
-    title: "BFSI & Fintech",
-    description: "High-trust environments that need secure releases, workflow control, and disciplined automation.",
+    title: "Finance & Fintech",
+    description: "Secure delivery, compliance automation, invoice workflows, and AI-powered financial process management.",
     icon: Landmark,
   },
   {
-    title: "Distribution & Logistics",
-    description: "Route rollout, partner movement, and workflow visibility across operational networks.",
-    icon: Truck,
+    title: "E-commerce & Retail",
+    description: "Brand design, creative assets, web development, and workflow automation for online businesses.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Healthcare & Biotech",
+    description: "MLOps for medical AI, document automation, compliance workflows, and secure cloud delivery.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Agencies & Creators",
+    description: "Logo design, creative production, web development, and AI tools for agencies and solo creators.",
+    icon: Palette,
+  },
+  {
+    title: "Startups & Scale-ups",
+    description: "Full-stack technology partner — AI, DevOps, design, and dev to launch and scale fast.",
+    icon: Zap,
   },
 ];
 
 const workSteps = [
   {
-    title: "Diagnose",
-    description: "Map execution drag across manpower, process, tooling, release flow, and business operations.",
+    title: "Understand",
+    description: "Map the business problem, technical context, and desired outcome before proposing any solution.",
   },
   {
     title: "Design",
-    description: "Choose the right operating layer, whether that means field deployment, secure delivery, or workflow automation.",
+    description: "Choose the right approach — AI automation, DevOps setup, creative design, or web build — based on the mandate.",
   },
   {
-    title: "Deploy",
-    description: "Roll out teams, systems, and workflows with clear ownership and practical reporting loops.",
+    title: "Deliver",
+    description: "Execute with clear ownership, measurable milestones, and consistent communication throughout.",
   },
   {
-    title: "Optimize",
-    description: "Improve throughput, tighten controls, and keep execution measurable as scale increases.",
+    title: "Improve",
+    description: "Iterate on delivery quality, tighten systems, and keep outputs improving as the engagement grows.",
   },
 ];
 
 const aboutPoints = [
-  "ForceField Field Partner for territory coverage, channel activation, and KRA-led field teams",
-  "ForceField DevOps & Automation for release discipline, MLOps, and business process automation",
-  "Workflow automation across sales, finance, HR, reporting, support, and internal operations",
-  "Operating structures built for scale, accountability, and measurable follow-through",
+  "AI automation and agentic AI systems for any business workflow",
+  "MLOps and DevOps for teams that need production-grade delivery",
+  "Logo, brand identity, and creative design for businesses that want to stand out",
+  "Web development for businesses that need a fast, modern online presence",
 ];
 
 const contactCards = [
   {
     label: "Email",
     value: COMPANY.email,
-    href: `mailto:${COMPANY.email}?subject=Discovery%20Call%20with%20ForceField%20Partners%20LLP`,
+    href: `mailto:${COMPANY.email}?subject=Enquiry%20—%20ForceField%20Technologies`,
     icon: Mail,
   },
   {
     label: "Phone / WhatsApp",
-    value: "+91 9474905990",
+    value: COMPANY.phone,
     href: "tel:+919474905990",
     icon: PhoneCall,
   },
@@ -188,6 +185,11 @@ const contactCards = [
     icon: BriefcaseBusiness,
   },
 ];
+
+const segmentCrests = {
+  tech: SITE_ASSETS.crest,
+  creative: SITE_ASSETS.crest,
+};
 
 export default function HomePage() {
   return (
@@ -208,28 +210,27 @@ export default function HomePage() {
                     <div className="rounded-[1.1rem] border border-white/16 bg-[#07162f] p-2.5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
                       <ForceFieldCrest className="h-auto w-12" />
                     </div>
-                    <Badge>On ground everywhere. In cloud where it counts.</Badge>
+                    <Badge>Intelligent Technology. Creative Design. Global Delivery.</Badge>
                   </div>
 
                   <div className="max-w-lg space-y-4">
                     <h1 className="font-display text-balance text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl lg:text-[3.2rem] lg:leading-[1.06]">
-                      Execution Teams for the Field, Cloud &amp; AI Era
+                      AI, DevOps, Design &amp; Development — Built for Businesses Everywhere
                     </h1>
                     <p className="text-balance text-sm leading-7 text-navy-800 sm:text-base sm:leading-8">
-                      ForceField Partners LLP helps businesses scale execution from field sales deployment to secure
-                      DevOps, production-grade MLOps, and business workflow automation.
+                      ForceField Technologies delivers AI automation, MLOps, DevOps pipelines, brand design, creative production, and web development to businesses and teams worldwide.
                     </p>
                   </div>
 
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                     <Button asChild size="lg">
                       <Link href="#contact">
-                        Book a Discovery Call
+                        Start a Project
                         <ArrowRight />
                       </Link>
                     </Button>
                     <Button asChild variant="secondary" size="lg">
-                      <Link href="#divisions">Explore Solutions</Link>
+                      <Link href="#services">Explore Services</Link>
                     </Button>
                   </div>
 
@@ -237,24 +238,24 @@ export default function HomePage() {
                     <div className="rounded-[1.5rem] border border-navy-900/10 bg-white px-4 py-4 shadow-lg shadow-slate-950/5">
                       <div className="mb-3 flex items-center gap-3">
                         <div className="flex size-10 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-700">
-                          <Users className="size-5" />
+                          <CloudCog className="size-5" />
                         </div>
-                        <p className="text-sm font-semibold text-navy-950">ForceField Field Partner</p>
+                        <p className="text-sm font-semibold text-navy-950">AI &amp; Technology</p>
                       </div>
                       <p className="text-sm leading-6 text-muted-foreground">
-                        Field force outsourcing, retailer activation, and field performance systems.
+                        AI automation, MLOps, DevOps, and DevSecOps for modern teams.
                       </p>
                     </div>
 
                     <div className="rounded-[1.5rem] border border-navy-900/10 bg-white px-4 py-4 shadow-lg shadow-slate-950/5">
                       <div className="mb-3 flex items-center gap-3">
                         <div className="flex size-10 items-center justify-center rounded-2xl bg-teal-500/10 text-teal-700">
-                          <Workflow className="size-5" />
+                          <Palette className="size-5" />
                         </div>
-                        <p className="text-sm font-semibold text-navy-950">ForceField DevOps &amp; Automation</p>
+                        <p className="text-sm font-semibold text-navy-950">Design &amp; Development</p>
                       </div>
                       <p className="text-sm leading-6 text-muted-foreground">
-                        DevOps, MLOps, AI-enabled delivery, and any business workflow automation.
+                        Logo design, creative graphics, and web development.
                       </p>
                     </div>
                   </div>
@@ -263,7 +264,7 @@ export default function HomePage() {
                 <div className="relative h-[320px] bg-linear-to-br from-slate-100 via-[#d9e9f2] to-[#b9d3e5] sm:h-[400px] lg:h-auto lg:min-h-full">
                   <Image
                     src={SITE_ASSETS.heroScene}
-                    alt="ForceField field execution and network operations visual"
+                    alt="ForceField Technologies — AI, DevOps, Design and Development"
                     fill
                     priority
                     className="object-cover object-[60%_center] xl:object-[58%_center]"
@@ -273,19 +274,19 @@ export default function HomePage() {
 
                   <div className="absolute left-4 top-4 hidden max-w-[13rem] rounded-[1.2rem] border border-white/55 bg-white/88 p-3 text-navy-950 shadow-xl shadow-slate-950/10 backdrop-blur-sm sm:block sm:left-5 sm:top-5 sm:max-w-[14rem]">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-600">
-                      Pan-India execution visibility
+                      AI-First Delivery
                     </p>
                     <p className="mt-1.5 text-xs leading-5 text-navy-800">
-                      Ground-force deployment, route coverage, and operational telemetry under one execution layer.
+                      Every workflow, system, and process evaluated through an automation-first lens.
                     </p>
                   </div>
 
                   <div className="absolute bottom-4 left-4 hidden max-w-[13rem] rounded-[1.2rem] border border-white/15 bg-navy-950/90 p-3 text-white shadow-xl shadow-slate-950/20 backdrop-blur-sm sm:block sm:bottom-5 sm:left-5 sm:max-w-[15rem]">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-300">
-                      Workflow automation in scope
+                      Global Delivery
                     </p>
                     <p className="mt-1.5 text-xs leading-5 text-slate-300">
-                      ForceField automates internal approvals, reporting, CRM handoffs, and AI-assisted operations.
+                      Remote-first team serving clients in India, UK, US, Middle East, and beyond.
                     </p>
                   </div>
                 </div>
@@ -294,7 +295,6 @@ export default function HomePage() {
               <div className="dark-band grid gap-px bg-white/10 sm:grid-cols-2 xl:grid-cols-4">
                 {heroMetrics.map((metric) => {
                   const Icon = metric.icon;
-
                   return (
                     <div key={metric.title} className="px-6 py-6 sm:px-7">
                       <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-white/8 text-teal-300">
@@ -310,7 +310,6 @@ export default function HomePage() {
               <div className="grid gap-px bg-navy-900/6 sm:grid-cols-2 xl:grid-cols-4">
                 {readinessCards.map((card) => {
                   const Icon = card.icon;
-
                   return (
                     <div key={card.title} className="bg-white px-6 py-6 sm:px-7">
                       <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-teal-500/10 text-teal-700">
@@ -330,24 +329,24 @@ export default function HomePage() {
           <div className="container space-y-12">
             <Reveal>
               <SectionHeading
-                eyebrow="Field Partner + DevOps Partner"
-                title="Two execution engines under one ForceField brand"
-                description="ForceField Field Partner runs market deployment, channel activation, sales training, and KRA-led field performance. ForceField DevOps & Automation runs secure delivery, MLOps, and workflow automation across business functions."
+                eyebrow="Two Service Lines"
+                title="Technology & AI — plus Design & Development"
+                description="ForceField Technology handles AI automation, MLOps, and DevOps for teams that need smarter systems and faster delivery. ForceField Creative & Build handles brand design, creative production, and web development for businesses that need to look sharp and build fast."
                 align="center"
               />
             </Reveal>
 
             <div className="grid gap-6 xl:grid-cols-2">
               {SERVICE_TRACKS.map((track, index) => {
-                const isField = track.id === "field";
+                const isTech = track.id === "tech";
 
                 return (
                   <Reveal key={track.id} delay={index * 0.08}>
                     <div
                       className={`field-line overflow-hidden rounded-[2rem] border p-6 shadow-forcefield sm:p-7 ${
-                        isField
-                          ? "border-white/75 bg-white text-navy-950"
-                          : "border-white/12 bg-linear-to-br from-navy-950 via-navy-900 to-[#0d566d] text-white"
+                        isTech
+                          ? "border-white/12 bg-linear-to-br from-navy-950 via-navy-900 to-[#0d566d] text-white"
+                          : "border-white/75 bg-white text-navy-950"
                       }`}
                     >
                       <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
@@ -357,10 +356,10 @@ export default function HomePage() {
                             {track.label}
                           </div>
                           <div className="space-y-3">
-                            <h2 className={`font-display text-3xl font-semibold tracking-tight ${isField ? "text-navy-950" : "text-white"}`}>
+                            <h2 className={`font-display text-3xl font-semibold tracking-tight ${isTech ? "text-white" : "text-navy-950"}`}>
                               {track.entity}
                             </h2>
-                            <p className={isField ? "text-base leading-7 text-muted-foreground" : "text-base leading-7 text-slate-300"}>
+                            <p className={isTech ? "text-base leading-7 text-slate-300" : "text-base leading-7 text-muted-foreground"}>
                               {track.description}
                             </p>
                           </div>
@@ -376,9 +375,9 @@ export default function HomePage() {
                           <div
                             key={bullet}
                             className={`rounded-[1.4rem] border px-4 py-4 text-sm leading-6 ${
-                              isField
-                                ? "border-navy-900/10 bg-slate-50 text-navy-900"
-                                : "border-white/10 bg-white/6 text-slate-200"
+                              isTech
+                                ? "border-white/10 bg-white/6 text-slate-200"
+                                : "border-navy-900/10 bg-slate-50 text-navy-900"
                             }`}
                           >
                             {bullet}
@@ -391,9 +390,9 @@ export default function HomePage() {
                           <span
                             key={capability}
                             className={`rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] ${
-                              isField
-                                ? "border-navy-900/10 bg-sky-500/8 text-sky-700"
-                                : "border-white/10 bg-white/8 text-teal-200"
+                              isTech
+                                ? "border-white/10 bg-white/8 text-teal-200"
+                                : "border-navy-900/10 bg-sky-500/8 text-sky-700"
                             }`}
                           >
                             {capability}
@@ -408,8 +407,8 @@ export default function HomePage() {
                             <ArrowRight />
                           </Link>
                         </Button>
-                        <Button asChild variant={isField ? "secondary" : "outline"} size="lg">
-                          <Link href="#contact">Discuss This Line</Link>
+                        <Button asChild variant={isTech ? "outline" : "secondary"} size="lg">
+                          <Link href="#contact">Start a Project</Link>
                         </Button>
                       </div>
                     </div>
@@ -427,15 +426,15 @@ export default function HomePage() {
             <Reveal>
               <SectionHeading
                 eyebrow="Why ForceField"
-                title="An execution layer for businesses that need control without drag"
-                description="The recurring problem is rarely ambition. It is operating inconsistency. ForceField closes the gap between strategy and disciplined delivery across people on ground, systems in cloud, and business workflows between teams."
+                title="Technology and design that move businesses forward — anywhere in the world"
+                description="The gap isn't ambition. It's execution quality. ForceField closes the gap between what businesses want to build or launch and what actually gets delivered — with the right mix of AI, DevOps, design, and development."
               />
 
               <div className="mt-8 space-y-4">
                 {[
-                  "ForceField Field Partner handles market coverage, channel activation, sales training, and KRA control",
-                  "ForceField DevOps & Automation handles DevOps, MLOps, release governance, and process automation",
-                  "Requests are routed to the ForceField team that matches the mandate",
+                  "AI automation and MLOps that turn manual processes into reliable, scalable systems",
+                  "DevOps and DevSecOps that give engineering teams speed without sacrificing stability",
+                  "Design and development that build visual credibility and digital presence globally",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
                     <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal-600" />
@@ -448,7 +447,7 @@ export default function HomePage() {
             <Reveal delay={0.08}>
               <div className="field-line overflow-hidden rounded-[2rem] border border-white/12 bg-navy-950 text-white shadow-forcefield">
                 <div className="hidden gap-4 border-b border-white/10 bg-white/4 px-6 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 md:grid md:grid-cols-[39%_61%]">
-                  <div>Common friction</div>
+                  <div>Common problem</div>
                   <div>ForceField response</div>
                 </div>
                 <div className="space-y-4 p-4 sm:p-6">
@@ -459,7 +458,7 @@ export default function HomePage() {
                     >
                       <div>
                         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 md:hidden">
-                          Common friction
+                          Common problem
                         </p>
                         <p className="text-sm leading-7 text-slate-300">{row.problem}</p>
                       </div>
@@ -482,8 +481,8 @@ export default function HomePage() {
             <Reveal>
               <SectionHeading
                 eyebrow="Industries"
-                title="Built for sectors where disciplined execution directly changes outcomes"
-                description="ForceField supports businesses that operate across distributed channels, operationally sensitive environments, cloud-native products, and workflow-heavy teams."
+                title="Built for sectors where technology, design, and automation change outcomes"
+                description="ForceField serves businesses that need AI-powered operations, reliable cloud delivery, strong brand identity, and fast web development — globally."
                 align="center"
               />
             </Reveal>
@@ -491,7 +490,6 @@ export default function HomePage() {
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {sectors.map((sector, index) => {
                 const Icon = sector.icon;
-
                 return (
                   <Reveal key={sector.title} delay={index * 0.05}>
                     <div className="field-line rounded-[1.75rem] border border-white/70 bg-white p-6 shadow-forcefield">
@@ -513,8 +511,8 @@ export default function HomePage() {
             <Reveal>
               <SectionHeading
                 eyebrow="How We Work"
-                title="A four-step operating model from diagnosis to controlled scale"
-                description="ForceField starts with the operating bottleneck, defines the execution model, deploys the right field or digital capability, and keeps improvement tied to measurable outcomes."
+                title="Understand, design, deliver, improve"
+                description="ForceField starts with the real problem, designs the right solution, delivers with clear ownership, and keeps improving until outcomes are measurable."
                 align="center"
               />
             </Reveal>
@@ -543,8 +541,8 @@ export default function HomePage() {
             <Reveal>
               <SectionHeading
                 eyebrow="About ForceField"
-                title="Execution-focused by design"
-                description="ForceField Partners LLP operates from Kolkata for businesses that need stronger market execution, safer software delivery, dependable ML operations, and automated business workflows across India."
+                title="Technology-first by design"
+                description="ForceField Technologies Pvt Ltd is a remote-first technology company delivering AI automation, DevOps, MLOps, brand design, creative production, and web development to businesses globally."
                 dark
               />
 
@@ -563,27 +561,27 @@ export default function HomePage() {
                 <div className="field-line overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-forcefield sm:p-7">
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-[39%_61%] sm:items-center">
                     <div className="rounded-[1.75rem] border border-white/16 bg-[#07162f] p-5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
-                      <ForceFieldCrest className="mx-auto w-full max-w-[180px]" />
+                      <ForceFieldCrest className="mx-auto h-auto w-full max-w-[180px]" />
                     </div>
                     <div className="space-y-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">
-                        ForceField execution principle
+                        ForceField principle
                       </p>
                       <p className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                        The right blend of people, process, systems, and automation to execute at scale.
+                        Intelligent technology. Purposeful design. Delivered without compromise.
                       </p>
                       <div className="space-y-3 text-sm leading-7 text-slate-300">
                         <div className="flex items-start gap-3">
                           <Target className="mt-1 size-5 shrink-0 text-teal-300" />
-                          <span>Field coverage, cloud delivery, and business workflows connected to measurable operating targets.</span>
+                          <span>AI automation and DevOps connected to measurable business outcomes.</span>
                         </div>
                         <div className="flex items-start gap-3">
-                          <CloudCog className="mt-1 size-5 shrink-0 text-teal-300" />
-                          <span>DevOps, MLOps, and automation built around release control, reliability, and throughput.</span>
+                          <Palette className="mt-1 size-5 shrink-0 text-teal-300" />
+                          <span>Design and development built for real audiences — not just to look good.</span>
                         </div>
                         <div className="flex items-start gap-3">
                           <Waypoints className="mt-1 size-5 shrink-0 text-teal-300" />
-                          <span>Field Partner and DevOps & Automation routes kept distinct from first conversation to delivery.</span>
+                          <span>Technology and creative services routed to the right specialist from day one.</span>
                         </div>
                       </div>
                     </div>
@@ -592,9 +590,9 @@ export default function HomePage() {
 
                 <div className="grid gap-4 sm:grid-cols-3">
                   {[
-                    "Field teams structured for coverage, supervision, outlet reporting, and KRA accountability",
-                    "DevOps and MLOps delivery built around secure releases, observability, and operational reliability",
-                    "Business workflow automation for approvals, handoffs, reporting, support, HR, finance, and sales ops",
+                    "AI agents and MLOps built for production — not just demos or prototypes",
+                    "DevOps and DevSecOps delivery built around speed, reliability, and security",
+                    "Design and web development that builds credibility and drives business growth",
                   ].map((item) => (
                     <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-7 text-slate-300">
                       {item}
@@ -615,18 +613,16 @@ export default function HomePage() {
                     <Badge>Contact</Badge>
                     <div className="space-y-4">
                       <h2 className="font-display text-balance text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl lg:text-5xl">
-                        Discuss the execution mandate
+                        Start a project with ForceField
                       </h2>
                       <p className="max-w-2xl text-balance text-base leading-8 text-muted-foreground sm:text-lg">
-                        Share the market, system, or workflow you want ForceField to strengthen. The right operating
-                        line will follow up with a practical next step.
+                        Tell us what you need — AI automation, DevOps, MLOps, design, or development. We'll respond with a practical next step.
                       </p>
                     </div>
 
                     <div className="grid gap-4 sm:grid-cols-2">
                       {contactCards.map((card) => {
                         const Icon = card.icon;
-
                         return (
                           <a
                             key={card.label}
@@ -651,13 +647,13 @@ export default function HomePage() {
                   <div className="rounded-[2rem] border border-navy-900/10 bg-slate-50 p-5 sm:p-6">
                     <div className="mb-5 space-y-2">
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-600">
-                        Execution inquiry
+                        Project enquiry
                       </p>
                       <h3 className="font-display text-2xl font-semibold tracking-tight text-navy-950">
-                        Tell ForceField what needs to move
+                        Tell us what you want to build
                       </h3>
                       <p className="text-sm leading-7 text-muted-foreground">
-                        Use this for field deployment, DevOps, MLOps, or any business workflow automation requirement.
+                        AI automation, DevOps, MLOps, design, or web development — we'll take it from here.
                       </p>
                     </div>
 

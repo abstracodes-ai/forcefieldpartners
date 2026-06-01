@@ -72,11 +72,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       name: BRAND_NAME,
       url: PRIMARY_DOMAIN,
     },
-    areaServed: {
-      "@type": "Country",
-      name: "India",
-    },
-    category: service.track === "field" ? "Field Execution" : "DevOps and Workflow Automation",
+    areaServed: "Worldwide",
+    category: service.track === "tech" ? "AI and Technology Services" : "Design and Development",
     url: `${PRIMARY_DOMAIN}/services/${service.slug}`,
   };
 

@@ -47,7 +47,7 @@ export function BrandLockup({
       >
         <Image
           src={SITE_ASSETS.brandSignature}
-          alt="ForceField Partners LLP logo"
+          alt="ForceField Technologies Pvt Ltd logo"
           width={351}
           height={157}
           className="h-auto w-full object-contain"

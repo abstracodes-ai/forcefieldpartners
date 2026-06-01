@@ -118,13 +118,13 @@ export default function OpenGraphImage() {
               <div
                 style={{
                   marginTop: "8px",
-                  fontSize: 14,
-                  letterSpacing: "0.38em",
+                  fontSize: 13,
+                  letterSpacing: "0.32em",
                   textTransform: "uppercase",
                   color: "rgba(198,214,234,0.84)",
                 }}
               >
-                Partners LLP
+                Technologies Pvt Ltd
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function OpenGraphImage() {
                 color: "#6AEFF5",
               }}
             >
-              Field Execution • DevOps • Workflow Automation
+              AI Automation • DevOps • Design • Development
             </div>
             <div
               style={{
@@ -156,7 +156,7 @@ export default function OpenGraphImage() {
                 letterSpacing: "-0.04em",
               }}
             >
-              Execution teams for the field, cloud, and AI era.
+              Intelligent Technology. Creative Design. Global Delivery.
             </div>
             <div
               style={{

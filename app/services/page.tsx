@@ -13,7 +13,7 @@ import { BRAND_NAME, PRIMARY_DOMAIN, SERVICE_TRACKS, SERVICES, SITE_KEYWORDS } f
 export const metadata: Metadata = {
   title: `Services | ${BRAND_NAME}`,
   description:
-    "Explore ForceField Partners LLP services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
+    "Explore ForceField Technologies Pvt Ltd services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
   keywords: SITE_KEYWORDS,
   alternates: {
     canonical: "/services",
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Services | ${BRAND_NAME}`,
     description:
-      "Explore ForceField Partners LLP services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
+      "Explore ForceField Technologies Pvt Ltd services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
     url: `${PRIMARY_DOMAIN}/services`,
   },
   twitter: {
     title: `Services | ${BRAND_NAME}`,
     description:
-      "Explore ForceField Partners LLP services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
+      "Explore ForceField Technologies Pvt Ltd services for field force outsourcing, distributor and retailer activation, DevOps, MLOps, and business workflow automation in India.",
   },
 };
 

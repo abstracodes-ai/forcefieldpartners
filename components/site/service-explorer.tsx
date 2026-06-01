@@ -6,9 +6,10 @@ import {
   ArrowRight,
   BrainCircuit,
   CloudCog,
-  GraduationCap,
+  Code,
+  Palette,
+  PenTool,
   ShieldCheck,
-  Store,
   Users,
   Workflow,
 } from "lucide-react";
@@ -24,21 +25,21 @@ import { cn } from "@/lib/utils";
 type FilterId = "all" | TrackId;
 
 const iconMap: Record<ServiceIconKey, typeof Users> = {
-  users: Users,
-  store: Store,
-  graduationCap: GraduationCap,
   cloudCog: CloudCog,
   brainCircuit: BrainCircuit,
   workflow: Workflow,
+  palette: Palette,
+  penTool: PenTool,
+  code: Code,
 };
 
 const filterOptions: Array<{ id: FilterId; label: string; description: string }> = [
-  { id: "all", label: "All Services", description: "View field, DevOps, MLOps, and workflow automation services together." },
-  { id: "field", label: "ForceField Field Partner", description: "Field force teams, channel activation, retail coverage, and KRAs." },
-  { id: "digital", label: "ForceField DevOps & Automation", description: "Secure cloud delivery, MLOps, and business process automation." },
+  { id: "all", label: "All Services", description: "AI automation, DevOps, MLOps, design, and web development together." },
+  { id: "tech", label: "AI & Technology", description: "AI automation, MLOps, DevOps, and DevSecOps for engineering teams." },
+  { id: "creative", label: "Design & Development", description: "Logo design, creative graphics, and web development." },
 ];
 
-const automationScopes = [
+const aiScopes = [
   "Lead routing",
   "CRM to ERP handoffs",
   "Approvals and escalations",
@@ -61,8 +62,8 @@ export function ServiceExplorer() {
         <Reveal>
           <SectionHeading
             eyebrow="ForceField Services"
-            title="Choose the operating line that matches the mandate"
-            description="Use ForceField Field Partner for feet-on-ground growth execution. Use ForceField DevOps & Automation for secure cloud delivery, MLOps, and business process automation."
+            title="AI, DevOps, Design & Development — all under one roof"
+            description="Use ForceField Technology for AI automation, MLOps, and DevOps. Use ForceField Creative & Build for logo design, creative production, and web development."
           />
         </Reveal>
 
@@ -72,14 +73,13 @@ export function ServiceExplorer() {
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="max-w-2xl space-y-3">
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-600">
-                    Choose operating line
+                    Select a service line
                   </p>
                   <h3 className="font-display text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
-                    Select the right ForceField line
+                    Find the right ForceField service
                   </h3>
                   <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                    Field programs need coverage, supervision, and outlet-level reporting. Digital programs need
-                    secure releases, reliable ML operations, and automated handoffs across teams.
+                    Technology services for teams that need AI, DevOps, and MLOps. Design and development services for businesses that need brand identity and web presence.
                   </p>
                 </div>
 
@@ -136,20 +136,18 @@ export function ServiceExplorer() {
               <div className="relative max-w-md space-y-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-200">
                   <ShieldCheck className="size-3.5" />
-                  Workflow automation across the business
+                  AI automation in scope
                 </div>
                 <div className="space-y-3">
                   <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Any business workflow automation is in scope
+                    Any workflow that slows business can be automated
                   </h3>
                   <p className="text-sm leading-7 text-slate-300 sm:text-base">
-                    ForceField automates business operations wherever coordination slows growth. That includes
-                    approvals, routing, reporting, support queues, internal handoffs, and AI-assisted workflows where
-                    it genuinely improves throughput.
+                    ForceField builds AI agents that eliminate approval bottlenecks, routing delays, manual reporting, and coordination overhead across any business function.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {automationScopes.map((scope) => (
+                  {aiScopes.map((scope) => (
                     <span
                       key={scope}
                       className="rounded-full border border-white/12 bg-white/8 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200"
@@ -169,7 +167,7 @@ export function ServiceExplorer() {
               <div
                 className={cn(
                   "field-line rounded-[1.75rem] border border-white/70 p-5 shadow-forcefield sm:p-6",
-                  track.id === "field" ? "bg-white" : "bg-white",
+                  track.id === "tech" ? "bg-white" : "bg-white",
                 )}
               >
                 <div className="flex items-center gap-4">
@@ -191,7 +189,7 @@ export function ServiceExplorer() {
           <AnimatePresence mode="popLayout">
             {filteredServices.map((service) => {
               const Icon = iconMap[service.iconKey];
-              const isField = service.track === "field";
+              const isField = service.track === "tech";
 
               return (
                 <motion.div
