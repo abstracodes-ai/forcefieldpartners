@@ -95,7 +95,7 @@ const rootSchemas = [
     email: COMPANY.email,
     telephone: COMPANY.phone,
     url: PRIMARY_DOMAIN,
-    logo: `${PRIMARY_DOMAIN}/icon.svg`,
+    logo: `${PRIMARY_DOMAIN}/logo.png`,
     foundingLocation: {
       "@type": "Place",
       name: "Kolkata, West Bengal, India",

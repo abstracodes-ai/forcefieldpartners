@@ -1,28 +1,16 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="shield" x1="35" y1="24" x2="89" y2="105" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#F2C870" />
-      <stop offset="1" stop-color="#B07A31" />
-    </linearGradient>
-    <linearGradient id="ring" x1="18" y1="64" x2="110" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0A8FC6" />
-      <stop offset="1" stop-color="#31E3DB" />
-    </linearGradient>
-  </defs>
-  <rect width="128" height="128" rx="32" fill="#07111F" />
-  <ellipse cx="64" cy="64" rx="44" ry="32" stroke="url(#ring)" stroke-width="6" opacity="0.9" />
-  <path
-    d="M64 22L88 32V59C88 77.3 77.9 93.8 64 101C50.1 93.8 40 77.3 40 59V32L64 22Z"
-    stroke="url(#shield)"
-    stroke-width="6"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M54 44H72M54 56H68M54 44V82"
-    stroke="url(#shield)"
-    stroke-width="7"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
+  <circle cx="64" cy="64" r="64" fill="white"/>
+  <!-- Outer arcs - top -->
+  <path d="M22 64 C22 38 40 20 64 20 C88 20 106 38 106 64" stroke="#CC1818" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 64 C32 43 46 28 64 28 C82 28 96 43 96 64" stroke="#CC1818" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.78"/>
+  <path d="M42 64 C42 49 52 37 64 37 C76 37 86 49 86 64" stroke="#CC1818" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M52 64 C52 54 57 47 64 47 C71 47 76 54 76 64" stroke="#CC1818" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+  <!-- Outer arcs - bottom (mirror) -->
+  <path d="M22 64 C22 90 40 108 64 108 C88 108 106 90 106 64" stroke="#CC1818" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 64 C32 85 46 100 64 100 C82 100 96 85 96 64" stroke="#CC1818" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.78"/>
+  <path d="M42 64 C42 79 52 91 64 91 C76 91 86 79 86 64" stroke="#CC1818" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M52 64 C52 74 57 81 64 81 C71 81 76 74 76 64" stroke="#CC1818" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+  <!-- Equatorial ring -->
+  <ellipse cx="64" cy="64" rx="42" ry="13" stroke="#CC1818" stroke-width="4" fill="none"/>
+  <ellipse cx="64" cy="64" rx="30" ry="9" stroke="#CC1818" stroke-width="2.5" fill="none" opacity="0.6"/>
 </svg>
