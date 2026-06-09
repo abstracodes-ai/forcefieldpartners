@@ -11,18 +11,9 @@ type BrandLockupProps = {
 };
 
 const sizeStyles = {
-  sm: {
-    frame: "w-[122px] rounded-xl",
-    subtitle: "text-[10px]",
-  },
-  md: {
-    frame: "w-[148px] rounded-[0.95rem]",
-    subtitle: "text-[11px]",
-  },
-  lg: {
-    frame: "w-[176px] rounded-[1.05rem]",
-    subtitle: "text-xs",
-  },
+  sm: { img: "h-10 w-auto", subtitle: "text-[10px]" },
+  md: { img: "h-12 w-auto", subtitle: "text-[11px]" },
+  lg: { img: "h-14 w-auto", subtitle: "text-xs" },
 };
 
 export function BrandLockup({
@@ -36,23 +27,13 @@ export function BrandLockup({
 
   return (
     <div className={cn("min-w-0", className)}>
-      <div
-        className={cn(
-          "field-line inline-flex overflow-hidden border backdrop-blur-sm",
-          styles.frame,
-          isDark
-            ? "border-white/14 bg-linear-to-br from-[#040b1b] via-[#07162f] to-[#063550] shadow-[0_18px_42px_rgba(0,0,0,0.35)]"
-            : "border-teal-500/30 bg-linear-to-br from-[#030c1f] via-[#071a35] to-[#063550] shadow-[0_12px_28px_rgba(6,16,31,0.28)]",
-        )}
-      >
-        <Image
-          src={SITE_ASSETS.brandSignature}
-          alt="ForceField Technologies Pvt Ltd logo"
-          width={512}
-          height={512}
-          className="h-auto w-full object-contain"
-        />
-      </div>
+      <Image
+        src={SITE_ASSETS.brandSignature}
+        alt="ForceField Technologies Pvt Ltd logo"
+        width={512}
+        height={512}
+        className={cn("object-contain", styles.img)}
+      />
       {showSubtitle ? (
         <div
           className={cn(

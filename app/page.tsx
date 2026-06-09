@@ -207,7 +207,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 lg:grid-cols-[46%_54%]">
                 <div className="relative px-6 pb-10 pt-8 sm:px-8 lg:px-10 lg:pb-12 lg:pt-10">
                   <div className="mb-5 flex flex-wrap items-center gap-3">
-                    <div className="rounded-[1.1rem] border border-white/16 bg-[#07162f] p-2.5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                    <div className="rounded-[1.1rem] border border-slate-200 bg-white p-2.5 shadow-[0_4px_12px_rgba(6,16,31,0.10)]">
                       <ForceFieldCrest className="h-auto w-12" />
                     </div>
                     <Badge>Intelligent Technology. Creative Design. Global Delivery.</Badge>
@@ -365,7 +365,7 @@ export default function HomePage() {
                           </div>
                         </div>
 
-                        <div className="w-fit rounded-[1.5rem] border border-white/16 bg-[#07162f] p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                        <div className="w-fit rounded-[1.5rem] border border-slate-200/20 bg-white/10 p-3 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
                           <ForceFieldCrest className="h-auto w-20 sm:w-24" />
                         </div>
                       </div>
@@ -560,7 +560,7 @@ export default function HomePage() {
               <div className="grid gap-6">
                 <div className="field-line overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-forcefield sm:p-7">
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-[39%_61%] sm:items-center">
-                    <div className="rounded-[1.75rem] border border-white/16 bg-[#07162f] p-5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+                    <div className="rounded-[1.75rem] border border-white/10 bg-white/8 p-5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
                       <ForceFieldCrest className="mx-auto h-auto w-full max-w-[180px]" />
                     </div>
                     <div className="space-y-4">

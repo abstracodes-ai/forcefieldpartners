@@ -42,7 +42,7 @@ export function SiteFooter() {
 
           <div className="grid gap-4 lg:max-w-md">
             <div className="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-              <div className="rounded-[1.2rem] border border-white/16 bg-[#07162f] p-2.5 shadow-[0_12px_28px_rgba(6,16,31,0.32)]">
+              <div className="rounded-[1.2rem] border border-white/10 bg-white/8 p-2.5 shadow-[0_4px_12px_rgba(6,16,31,0.20)]">
                 <ForceFieldCrest className="h-auto w-14" />
               </div>
               <div className="text-sm leading-6 text-slate-300">
