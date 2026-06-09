@@ -48,8 +48,8 @@ export function BrandLockup({
         <Image
           src={SITE_ASSETS.brandSignature}
           alt="ForceField Technologies Pvt Ltd logo"
-          width={351}
-          height={157}
+          width={512}
+          height={512}
           className="h-auto w-full object-contain"
         />
       </div>

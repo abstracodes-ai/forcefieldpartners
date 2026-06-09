@@ -1,6 +1,6 @@
 import heroScene from "@/assets/forcefield-hero-branded.png";
-import brandSignature from "@/assets/expected_logo.png";
-import crest from "@/assets/logo.png";
+import brandSignature from "@/assets/final.png";
+import crest from "@/assets/final.png";
 
 export const SITE_ASSETS = {
   heroScene,
